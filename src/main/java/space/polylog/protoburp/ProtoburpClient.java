@@ -8,6 +8,10 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.StatusRuntimeException;
 import space.polylog.burp.protobuf.BurpConnectorGrpc;
+import space.polylog.burp.protobuf.BurpRequest;
+import space.polylog.burp.protobuf.BurpResponse;
+
+import java.util.concurrent.TimeUnit;
 
 public class ProtoburpClient {
 
@@ -19,21 +23,39 @@ public class ProtoburpClient {
                 .usePlaintext(usePlain));
     }
 
-    public ProtoburpClient(ManagedChannelBuilder<?> mcb){
+    private ProtoburpClient(ManagedChannelBuilder<?> mcb){
         channel = mcb.build();
         blockingStub = BurpConnectorGrpc.newBlockingStub(channel);
     }
 
-      public static void main(String[] args) throws Exception {
-          ProtoburpClient client = new ProtoburpClient("localhost", 50051,false);
-    try {
-      /* Access a service running on the local machine on port 50051 */
-      String user = "world";
-      if (args.length > 0) {
-        user = args[0]; /* Use the arg as the name to greet if provided */
-      }
-    } finally {
+    public void shutdown() throws InterruptedException {
+        channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
     }
-  }
+
+    public BurpRequest sendBurpRequest(BurpRequest request){
+        BurpRequest response = null;
+        try{
+            response = blockingStub.sendRequest(request);
+        }
+        catch (StatusRuntimeException sre){
+
+            response = null;
+
+        } finally {
+            return response;
+        }
+    }
+
+    public void sendBurpResponse(BurpResponse response){
+        try{
+            blockingStub.sendResponse(response);
+        }
+        catch (StatusRuntimeException sre){
+
+
+        } finally {
+            return;
+        }
+    }
 
 }

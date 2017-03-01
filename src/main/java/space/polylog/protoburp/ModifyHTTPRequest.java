@@ -18,8 +18,9 @@
 package space.polylog.protoburp;
 
 import burp.*;
-import space.polylog.burp.protobuf.BurpMessages.BurpResponse;
-import space.polylog.burp.protobuf.BurpMessages.BurpRequest;
+import space.polylog.burp.protobuf.BurpRequest;
+import space.polylog.burp.protobuf.BurpResponse;
+
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;

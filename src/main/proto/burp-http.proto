@@ -10,7 +10,7 @@ option objc_class_prefix = "BCP";
 
 service BurpConnector {
   rpc SendRequest (BurpRequest) returns (BurpRequest) {}
-  rpc SendResponse (BurpRequest) returns (Empty) {}
+  rpc SendResponse (BurpResponse) returns (Empty) {}
 
 }
 
