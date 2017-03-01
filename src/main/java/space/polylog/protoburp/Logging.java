@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package de.guenther.tim.burp.utils;
+package space.polylog.protoburp;
 
 import burp.BurpExtender;
 import java.io.PrintWriter;
@@ -24,10 +24,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * The extension internal logging.
- * @author Tim Guenther
- * @version 1.0
- * 
  * <b>ATTENTION!</b><br>
  * Based on the internal architecture of Burp Suite, the first called class is
  * {@link burp.BurpExtender}, this class initialises the {@link java.io.PrintWriter}.

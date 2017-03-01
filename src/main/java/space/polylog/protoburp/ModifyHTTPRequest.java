@@ -20,19 +20,16 @@ package space.polylog.protoburp;
 import burp.*;
 import space.polylog.burp.protobuf.BurpMessages.BurpResponse;
 import space.polylog.burp.protobuf.BurpMessages.BurpRequest;
-import de.guenther.tim.burp.utils.Logging;
 
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.net.Socket;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
 
-/**
- * Basic IHTTPListener for all incoming and outgoing HTTP messages.
- *
- * @author Tim Guenther
- * @version 1.0
- */
 public class ModifyHTTPRequest implements IHttpListener {
 
     private IBurpExtenderCallbacks callbacks;
@@ -41,10 +38,14 @@ public class ModifyHTTPRequest implements IHttpListener {
         this.callbacks = callbacks;
     }
 
-
     private IExtensionHelpers helpers() {
         return callbacks.getHelpers();
     }
+
+    private static int SYNC_PORT = 32768;
+
+    private static String HOST_NAME = "localhost";
+
 
 
     private void log(String msg) {
@@ -67,7 +68,7 @@ public class ModifyHTTPRequest implements IHttpListener {
     private void handleRequest(IHttpRequestResponse ihrr) {
         byte[] requestData = ihrr.getRequest();
         IRequestInfo iRequestInfo = helpers().analyzeRequest(ihrr);
-        List<String> headers = iRequestInfo.getHeaders();
+
         URL url = iRequestInfo.getUrl();
 
         int bodyOffset = iRequestInfo.getBodyOffset();
@@ -100,6 +101,9 @@ public class ModifyHTTPRequest implements IHttpListener {
 
         builder = builder.setBase64Body(encodedBody);
         BurpRequest request = builder.build();
+
+        BurpRequest modifiedRequest;
+
         return;
 
     }

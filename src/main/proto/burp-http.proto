@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+package space.polylog.burp;
+
+option java_multiple_files = true;
+option java_package = "space.polylog.burp.protobuf";
+option java_outer_classname = "BurpConnectorProto";
+
+option objc_class_prefix = "BCP";
+
+service BurpConnector {
+  rpc SendRequest (BurpRequest) returns (BurpRequest) {}
+  rpc SendResponse (BurpRequest) returns (Empty) {}
+
+}
+
+message Empty {}
+
+message BurpRequest {
+    message URL {
+        string protocol = 1;
+        string host = 2;
+        int32 port = 3;
+        string file = 4;
+    }
+
+    enum State {
+        UNMODIFIED = 0;
+        MODIFIED = 1;
+        DELETED = 2;
+        ADDED = 3;
+    }
+
+    enum ContentType {
+        CONTENT_TYPE_NONE = 0;
+        CONTENT_TYPE_URL_ENCODED = 1;
+        CONTENT_TYPE_MULTIPART = 2;
+        CONTENT_TYPE_JSON = 4;
+        CONTENT_TYPE_AMF = 5;
+        CONTENT_TYPE_UNKNOWN = -1;
+    }
+
+    message Parameter{
+
+        string name = 1;
+        string value = 2;
+        int32 type = 3;
+        State state = 4;
+    }
+
+    repeated string headers = 1;
+    URL url = 2;
+    string requestMethod = 3;
+    repeated Parameter parameters = 4;
+    State state = 5;
+    ContentType contentType= 6;
+    string base64Body = 7;
+
+}
+
+
+message BurpResponse {
+    message Cookie {
+        int64 expirationDate = 1;
+        string domain = 2;
+        string name = 3;
+        string value = 4;
+    }
+
+    repeated string headers = 1;
+    repeated Cookie cookies = 2;
+    string inferredMimeType = 3;
+    string statedMimeType = 4;
+    int32 statusCode = 5;
+    string base64Body = 6;
+}

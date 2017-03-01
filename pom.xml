@@ -10,7 +10,9 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
 	    <burp.version>2.1.0</burp.version>
+        <grpc.version>1.1.2</grpc.version>
     </properties>
+
     <dependencies>
         <!-- Burp Suite Extension API -->
         <dependency>
@@ -19,16 +21,33 @@
             <version>${burp.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.google.protobuf</groupId>
-            <artifactId>protobuf-java</artifactId>
-            <version>2.6.1</version>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-netty</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-protobuf</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-stub</artifactId>
+            <version>${grpc.version}</version>
         </dependency>
     </dependencies>
     <build>
+        <extensions>
+            <extension>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>1.4.0.Final</version>
+            </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>RELEASE</version>
+                <version>3.6.1</version>
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
@@ -55,7 +74,25 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.xolstice.maven.plugins</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>0.5.0</version>
+                <configuration>
+                    <protocArtifact>com.google.protobuf:protoc:3.2.0:exe:${os.detected.classifier}</protocArtifact>
+                    <pluginId>grpc-java</pluginId>
+                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.1.2:exe:${os.detected.classifier}</pluginArtifact>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>compile-custom</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-    <name>OWASP Workshop: Burp Development</name>
+    <name>ProtoBurp</name>
 </project>

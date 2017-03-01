@@ -17,8 +17,8 @@
  */
 package burp;
 
-import de.guenther.tim.burp.utils.Logging;
-import de.tim.guenther.burp.owasp.ModifyHTTPRequest;
+import space.polylog.protoburp.Logging;
+import space.polylog.protoburp.ModifyHTTPRequest;
 
 import java.io.PrintWriter;
 
@@ -30,24 +30,25 @@ import java.io.PrintWriter;
  * @version 1.0
  */
 
-public class BurpExtender implements IBurpExtender{
-    /**
-     * {@value #EXTENSION_NAME}
-     */
-    public static final String EXTENSION_NAME = "OWASP Workshop Ruhrpott";
-    
+public class BurpExtender implements IBurpExtender {
+
+    public static final String EXTENSION_NAME = "Protoburp";
+
+    private IBurpExtenderCallbacks callbacks;
+
     private static PrintWriter stdout;
     private static PrintWriter stderr;
     
     /**
      * Register all new functions like for the internals and GUI.
      * Registered are Editors, a Tab and a HttpListner
-     * @param callbacks {@link burp.IBurpExtenderCallbacks}
+     * @param clbks {@link burp.IBurpExtenderCallbacks}
      */
     
     @Override
-    public void registerExtenderCallbacks(IBurpExtenderCallbacks callbacks) {
+    public void registerExtenderCallbacks(IBurpExtenderCallbacks clbks) {
 
+        callbacks = clbks;
         //set extension name
         callbacks.setExtensionName(EXTENSION_NAME);
         
@@ -60,9 +61,9 @@ public class BurpExtender implements IBurpExtender{
         
         //register the http listener for burp
         callbacks.registerHttpListener(new ModifyHTTPRequest(callbacks));
-        Logging.getInstance().log(getClass(), "HTTPListener activated", Logging.INFO);
+            Logging.getInstance().log(getClass(), "HTTPListener activated", Logging.INFO);
     }
-    
+
     
     /**
      * Get a {@link java.io.PrintWriter} to the standard output of Burp.
@@ -79,5 +80,6 @@ public class BurpExtender implements IBurpExtender{
     public static PrintWriter getStdErr(){
         return stderr;
     }
- 
+
+
 }

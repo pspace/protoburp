@@ -6,8 +6,379 @@ package space.polylog.burp.protobuf;
 public final class BurpMessages {
   private BurpMessages() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      com.google.protobuf.ExtensionRegistryLite registry) {
   }
+
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
+  }
+  public interface EmptyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:space.polylog.burp.Empty)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code space.polylog.burp.Empty}
+   */
+  public  static final class Empty extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:space.polylog.burp.Empty)
+      EmptyOrBuilder {
+    // Use Empty.newBuilder() to construct.
+    private Empty(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Empty() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private Empty(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_Empty_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_Empty_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              space.polylog.burp.protobuf.BurpMessages.Empty.class, space.polylog.burp.protobuf.BurpMessages.Empty.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof space.polylog.burp.protobuf.BurpMessages.Empty)) {
+        return super.equals(obj);
+      }
+      space.polylog.burp.protobuf.BurpMessages.Empty other = (space.polylog.burp.protobuf.BurpMessages.Empty) obj;
+
+      boolean result = true;
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static space.polylog.burp.protobuf.BurpMessages.Empty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static space.polylog.burp.protobuf.BurpMessages.Empty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static space.polylog.burp.protobuf.BurpMessages.Empty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static space.polylog.burp.protobuf.BurpMessages.Empty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static space.polylog.burp.protobuf.BurpMessages.Empty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static space.polylog.burp.protobuf.BurpMessages.Empty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static space.polylog.burp.protobuf.BurpMessages.Empty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static space.polylog.burp.protobuf.BurpMessages.Empty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static space.polylog.burp.protobuf.BurpMessages.Empty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static space.polylog.burp.protobuf.BurpMessages.Empty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(space.polylog.burp.protobuf.BurpMessages.Empty prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code space.polylog.burp.Empty}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:space.polylog.burp.Empty)
+        space.polylog.burp.protobuf.BurpMessages.EmptyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_Empty_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_Empty_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                space.polylog.burp.protobuf.BurpMessages.Empty.class, space.polylog.burp.protobuf.BurpMessages.Empty.Builder.class);
+      }
+
+      // Construct using space.polylog.burp.protobuf.BurpMessages.Empty.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_Empty_descriptor;
+      }
+
+      public space.polylog.burp.protobuf.BurpMessages.Empty getDefaultInstanceForType() {
+        return space.polylog.burp.protobuf.BurpMessages.Empty.getDefaultInstance();
+      }
+
+      public space.polylog.burp.protobuf.BurpMessages.Empty build() {
+        space.polylog.burp.protobuf.BurpMessages.Empty result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public space.polylog.burp.protobuf.BurpMessages.Empty buildPartial() {
+        space.polylog.burp.protobuf.BurpMessages.Empty result = new space.polylog.burp.protobuf.BurpMessages.Empty(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof space.polylog.burp.protobuf.BurpMessages.Empty) {
+          return mergeFrom((space.polylog.burp.protobuf.BurpMessages.Empty)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(space.polylog.burp.protobuf.BurpMessages.Empty other) {
+        if (other == space.polylog.burp.protobuf.BurpMessages.Empty.getDefaultInstance()) return this;
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        space.polylog.burp.protobuf.BurpMessages.Empty parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (space.polylog.burp.protobuf.BurpMessages.Empty) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:space.polylog.burp.Empty)
+    }
+
+    // @@protoc_insertion_point(class_scope:space.polylog.burp.Empty)
+    private static final space.polylog.burp.protobuf.BurpMessages.Empty DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new space.polylog.burp.protobuf.BurpMessages.Empty();
+    }
+
+    public static space.polylog.burp.protobuf.BurpMessages.Empty getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Empty>
+        PARSER = new com.google.protobuf.AbstractParser<Empty>() {
+      public Empty parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Empty(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Empty> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Empty> getParserForType() {
+      return PARSER;
+    }
+
+    public space.polylog.burp.protobuf.BurpMessages.Empty getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface BurpRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:space.polylog.burp.BurpRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -15,7 +386,7 @@ public final class BurpMessages {
     /**
      * <code>repeated string headers = 1;</code>
      */
-    com.google.protobuf.ProtocolStringList
+    java.util.List<java.lang.String>
         getHeadersList();
     /**
      * <code>repeated string headers = 1;</code>
@@ -32,28 +403,24 @@ public final class BurpMessages {
         getHeadersBytes(int index);
 
     /**
-     * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+     * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
      */
     boolean hasUrl();
     /**
-     * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+     * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
      */
     space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL getUrl();
     /**
-     * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+     * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
      */
     space.polylog.burp.protobuf.BurpMessages.BurpRequest.URLOrBuilder getUrlOrBuilder();
 
     /**
-     * <code>required string requestMethod = 3;</code>
-     */
-    boolean hasRequestMethod();
-    /**
-     * <code>required string requestMethod = 3;</code>
+     * <code>string requestMethod = 3;</code>
      */
     java.lang.String getRequestMethod();
     /**
-     * <code>required string requestMethod = 3;</code>
+     * <code>string requestMethod = 3;</code>
      */
     com.google.protobuf.ByteString
         getRequestMethodBytes();
@@ -83,33 +450,29 @@ public final class BurpMessages {
         int index);
 
     /**
-     * <code>required .space.polylog.burp.BurpRequest.State state = 5;</code>
+     * <code>.space.polylog.burp.BurpRequest.State state = 5;</code>
      */
-    boolean hasState();
+    int getStateValue();
     /**
-     * <code>required .space.polylog.burp.BurpRequest.State state = 5;</code>
+     * <code>.space.polylog.burp.BurpRequest.State state = 5;</code>
      */
     space.polylog.burp.protobuf.BurpMessages.BurpRequest.State getState();
 
     /**
-     * <code>required .space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
+     * <code>.space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
      */
-    boolean hasContentType();
+    int getContentTypeValue();
     /**
-     * <code>required .space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
+     * <code>.space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
      */
     space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType getContentType();
 
     /**
-     * <code>optional string base64Body = 57;</code>
-     */
-    boolean hasBase64Body();
-    /**
-     * <code>optional string base64Body = 57;</code>
+     * <code>string base64Body = 7;</code>
      */
     java.lang.String getBase64Body();
     /**
-     * <code>optional string base64Body = 57;</code>
+     * <code>string base64Body = 7;</code>
      */
     com.google.protobuf.ByteString
         getBase64BodyBytes();
@@ -117,40 +480,34 @@ public final class BurpMessages {
   /**
    * Protobuf type {@code space.polylog.burp.BurpRequest}
    */
-  public static final class BurpRequest extends
-      com.google.protobuf.GeneratedMessage implements
+  public  static final class BurpRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:space.polylog.burp.BurpRequest)
       BurpRequestOrBuilder {
     // Use BurpRequest.newBuilder() to construct.
-    private BurpRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private BurpRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private BurpRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final BurpRequest defaultInstance;
-    public static BurpRequest getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public BurpRequest getDefaultInstanceForType() {
-      return defaultInstance;
+    private BurpRequest() {
+      headers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      requestMethod_ = "";
+      parameters_ = java.util.Collections.emptyList();
+      state_ = 0;
+      contentType_ = 0;
+      base64Body_ = "";
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
     private BurpRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -160,38 +517,37 @@ public final class BurpMessages {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!input.skipField(tag)) {
                 done = true;
               }
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 headers_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              headers_.add(bs);
+              headers_.add(s);
               break;
             }
             case 18: {
               space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+              if (url_ != null) {
                 subBuilder = url_.toBuilder();
               }
-              url_ = input.readMessage(space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.PARSER, extensionRegistry);
+              url_ = input.readMessage(space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(url_);
                 url_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000001;
+
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              requestMethod_ = bs;
+              java.lang.String s = input.readStringRequireUtf8();
+
+              requestMethod_ = s;
               break;
             }
             case 34: {
@@ -199,35 +555,26 @@ public final class BurpMessages {
                 parameters_ = new java.util.ArrayList<space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter>();
                 mutable_bitField0_ |= 0x00000008;
               }
-              parameters_.add(input.readMessage(space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter.PARSER, extensionRegistry));
+              parameters_.add(
+                  input.readMessage(space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter.parser(), extensionRegistry));
               break;
             }
             case 40: {
               int rawValue = input.readEnum();
-              space.polylog.burp.protobuf.BurpMessages.BurpRequest.State value = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(5, rawValue);
-              } else {
-                bitField0_ |= 0x00000004;
-                state_ = value;
-              }
+
+              state_ = rawValue;
               break;
             }
             case 48: {
               int rawValue = input.readEnum();
-              space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType value = space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(6, rawValue);
-              } else {
-                bitField0_ |= 0x00000008;
-                contentType_ = value;
-              }
+
+              contentType_ = rawValue;
               break;
             }
-            case 458: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
-              base64Body_ = bs;
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              base64Body_ = s;
               break;
             }
           }
@@ -236,7 +583,7 @@ public final class BurpMessages {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           headers_ = headers_.getUnmodifiableView();
@@ -244,7 +591,6 @@ public final class BurpMessages {
         if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           parameters_ = java.util.Collections.unmodifiableList(parameters_);
         }
-        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -253,26 +599,11 @@ public final class BurpMessages {
       return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               space.polylog.burp.protobuf.BurpMessages.BurpRequest.class, space.polylog.burp.protobuf.BurpMessages.BurpRequest.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<BurpRequest> PARSER =
-        new com.google.protobuf.AbstractParser<BurpRequest>() {
-      public BurpRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BurpRequest(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<BurpRequest> getParserForType() {
-      return PARSER;
     }
 
     /**
@@ -283,19 +614,20 @@ public final class BurpMessages {
       /**
        * <code>UNMODIFIED = 0;</code>
        */
-      UNMODIFIED(0, 0),
+      UNMODIFIED(0),
       /**
        * <code>MODIFIED = 1;</code>
        */
-      MODIFIED(1, 1),
+      MODIFIED(1),
       /**
        * <code>DELETED = 2;</code>
        */
-      DELETED(2, 2),
+      DELETED(2),
       /**
        * <code>ADDED = 3;</code>
        */
-      ADDED(3, 3),
+      ADDED(3),
+      UNRECOGNIZED(-1),
       ;
 
       /**
@@ -316,9 +648,23 @@ public final class BurpMessages {
       public static final int ADDED_VALUE = 3;
 
 
-      public final int getNumber() { return value; }
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
 
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
       public static State valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static State forNumber(int value) {
         switch (value) {
           case 0: return UNMODIFIED;
           case 1: return MODIFIED;
@@ -332,17 +678,17 @@ public final class BurpMessages {
           internalGetValueMap() {
         return internalValueMap;
       }
-      private static com.google.protobuf.Internal.EnumLiteMap<State>
-          internalValueMap =
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          State> internalValueMap =
             new com.google.protobuf.Internal.EnumLiteMap<State>() {
               public State findValueByNumber(int number) {
-                return State.valueOf(number);
+                return State.forNumber(number);
               }
             };
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
+        return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptorForType() {
@@ -361,14 +707,15 @@ public final class BurpMessages {
           throw new java.lang.IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
         return VALUES[desc.getIndex()];
       }
 
-      private final int index;
       private final int value;
 
-      private State(int index, int value) {
-        this.index = index;
+      private State(int value) {
         this.value = value;
       }
 
@@ -383,27 +730,28 @@ public final class BurpMessages {
       /**
        * <code>CONTENT_TYPE_NONE = 0;</code>
        */
-      CONTENT_TYPE_NONE(0, 0),
+      CONTENT_TYPE_NONE(0),
       /**
        * <code>CONTENT_TYPE_URL_ENCODED = 1;</code>
        */
-      CONTENT_TYPE_URL_ENCODED(1, 1),
+      CONTENT_TYPE_URL_ENCODED(1),
       /**
        * <code>CONTENT_TYPE_MULTIPART = 2;</code>
        */
-      CONTENT_TYPE_MULTIPART(2, 2),
+      CONTENT_TYPE_MULTIPART(2),
       /**
        * <code>CONTENT_TYPE_JSON = 4;</code>
        */
-      CONTENT_TYPE_JSON(3, 4),
+      CONTENT_TYPE_JSON(4),
       /**
        * <code>CONTENT_TYPE_AMF = 5;</code>
        */
-      CONTENT_TYPE_AMF(4, 5),
+      CONTENT_TYPE_AMF(5),
       /**
        * <code>CONTENT_TYPE_UNKNOWN = -1;</code>
        */
-      CONTENT_TYPE_UNKNOWN(5, -1),
+      CONTENT_TYPE_UNKNOWN(-1),
+      UNRECOGNIZED(-1),
       ;
 
       /**
@@ -432,9 +780,23 @@ public final class BurpMessages {
       public static final int CONTENT_TYPE_UNKNOWN_VALUE = -1;
 
 
-      public final int getNumber() { return value; }
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
 
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
       public static ContentType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ContentType forNumber(int value) {
         switch (value) {
           case 0: return CONTENT_TYPE_NONE;
           case 1: return CONTENT_TYPE_URL_ENCODED;
@@ -450,17 +812,17 @@ public final class BurpMessages {
           internalGetValueMap() {
         return internalValueMap;
       }
-      private static com.google.protobuf.Internal.EnumLiteMap<ContentType>
-          internalValueMap =
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ContentType> internalValueMap =
             new com.google.protobuf.Internal.EnumLiteMap<ContentType>() {
               public ContentType findValueByNumber(int number) {
-                return ContentType.valueOf(number);
+                return ContentType.forNumber(number);
               }
             };
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
+        return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptorForType() {
@@ -479,14 +841,15 @@ public final class BurpMessages {
           throw new java.lang.IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
         return VALUES[desc.getIndex()];
       }
 
-      private final int index;
       private final int value;
 
-      private ContentType(int index, int value) {
-        this.index = index;
+      private ContentType(int value) {
         this.value = value;
       }
 
@@ -498,52 +861,36 @@ public final class BurpMessages {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional string protocol = 1;</code>
-       */
-      boolean hasProtocol();
-      /**
-       * <code>optional string protocol = 1;</code>
+       * <code>string protocol = 1;</code>
        */
       java.lang.String getProtocol();
       /**
-       * <code>optional string protocol = 1;</code>
+       * <code>string protocol = 1;</code>
        */
       com.google.protobuf.ByteString
           getProtocolBytes();
 
       /**
-       * <code>optional string host = 2;</code>
-       */
-      boolean hasHost();
-      /**
-       * <code>optional string host = 2;</code>
+       * <code>string host = 2;</code>
        */
       java.lang.String getHost();
       /**
-       * <code>optional string host = 2;</code>
+       * <code>string host = 2;</code>
        */
       com.google.protobuf.ByteString
           getHostBytes();
 
       /**
-       * <code>optional int32 port = 3;</code>
-       */
-      boolean hasPort();
-      /**
-       * <code>optional int32 port = 3;</code>
+       * <code>int32 port = 3;</code>
        */
       int getPort();
 
       /**
-       * <code>optional string file = 4;</code>
-       */
-      boolean hasFile();
-      /**
-       * <code>optional string file = 4;</code>
+       * <code>string file = 4;</code>
        */
       java.lang.String getFile();
       /**
-       * <code>optional string file = 4;</code>
+       * <code>string file = 4;</code>
        */
       com.google.protobuf.ByteString
           getFileBytes();
@@ -551,40 +898,32 @@ public final class BurpMessages {
     /**
      * Protobuf type {@code space.polylog.burp.BurpRequest.URL}
      */
-    public static final class URL extends
-        com.google.protobuf.GeneratedMessage implements
+    public  static final class URL extends
+        com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:space.polylog.burp.BurpRequest.URL)
         URLOrBuilder {
       // Use URL.newBuilder() to construct.
-      private URL(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private URL(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
-        this.unknownFields = builder.getUnknownFields();
       }
-      private URL(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-      private static final URL defaultInstance;
-      public static URL getDefaultInstance() {
-        return defaultInstance;
-      }
-
-      public URL getDefaultInstanceForType() {
-        return defaultInstance;
+      private URL() {
+        protocol_ = "";
+        host_ = "";
+        port_ = 0;
+        file_ = "";
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
-          getUnknownFields() {
-        return this.unknownFields;
+      getUnknownFields() {
+        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
       }
       private URL(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        initFields();
+        this();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -594,33 +933,32 @@ public final class BurpMessages {
                 done = true;
                 break;
               default: {
-                if (!parseUnknownField(input, unknownFields,
-                                       extensionRegistry, tag)) {
+                if (!input.skipField(tag)) {
                   done = true;
                 }
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000001;
-                protocol_ = bs;
+                java.lang.String s = input.readStringRequireUtf8();
+
+                protocol_ = s;
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000002;
-                host_ = bs;
+                java.lang.String s = input.readStringRequireUtf8();
+
+                host_ = s;
                 break;
               }
               case 24: {
-                bitField0_ |= 0x00000004;
+
                 port_ = input.readInt32();
                 break;
               }
               case 34: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000008;
-                file_ = bs;
+                java.lang.String s = input.readStringRequireUtf8();
+
+                file_ = s;
                 break;
               }
             }
@@ -629,9 +967,8 @@ public final class BurpMessages {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
-              e.getMessage()).setUnfinishedMessage(this);
+              e).setUnfinishedMessage(this);
         } finally {
-          this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
@@ -640,39 +977,17 @@ public final class BurpMessages {
         return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_URL_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_URL_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.class, space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<URL> PARSER =
-          new com.google.protobuf.AbstractParser<URL>() {
-        public URL parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new URL(input, extensionRegistry);
-        }
-      };
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<URL> getParserForType() {
-        return PARSER;
-      }
-
-      private int bitField0_;
       public static final int PROTOCOL_FIELD_NUMBER = 1;
-      private java.lang.Object protocol_;
+      private volatile java.lang.Object protocol_;
       /**
-       * <code>optional string protocol = 1;</code>
-       */
-      public boolean hasProtocol() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional string protocol = 1;</code>
+       * <code>string protocol = 1;</code>
        */
       public java.lang.String getProtocol() {
         java.lang.Object ref = protocol_;
@@ -682,14 +997,12 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            protocol_ = s;
-          }
+          protocol_ = s;
           return s;
         }
       }
       /**
-       * <code>optional string protocol = 1;</code>
+       * <code>string protocol = 1;</code>
        */
       public com.google.protobuf.ByteString
           getProtocolBytes() {
@@ -706,15 +1019,9 @@ public final class BurpMessages {
       }
 
       public static final int HOST_FIELD_NUMBER = 2;
-      private java.lang.Object host_;
+      private volatile java.lang.Object host_;
       /**
-       * <code>optional string host = 2;</code>
-       */
-      public boolean hasHost() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional string host = 2;</code>
+       * <code>string host = 2;</code>
        */
       public java.lang.String getHost() {
         java.lang.Object ref = host_;
@@ -724,14 +1031,12 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            host_ = s;
-          }
+          host_ = s;
           return s;
         }
       }
       /**
-       * <code>optional string host = 2;</code>
+       * <code>string host = 2;</code>
        */
       public com.google.protobuf.ByteString
           getHostBytes() {
@@ -750,28 +1055,16 @@ public final class BurpMessages {
       public static final int PORT_FIELD_NUMBER = 3;
       private int port_;
       /**
-       * <code>optional int32 port = 3;</code>
-       */
-      public boolean hasPort() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional int32 port = 3;</code>
+       * <code>int32 port = 3;</code>
        */
       public int getPort() {
         return port_;
       }
 
       public static final int FILE_FIELD_NUMBER = 4;
-      private java.lang.Object file_;
+      private volatile java.lang.Object file_;
       /**
-       * <code>optional string file = 4;</code>
-       */
-      public boolean hasFile() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>optional string file = 4;</code>
+       * <code>string file = 4;</code>
        */
       public java.lang.String getFile() {
         java.lang.Object ref = file_;
@@ -781,14 +1074,12 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            file_ = s;
-          }
+          file_ = s;
           return s;
         }
       }
       /**
-       * <code>optional string file = 4;</code>
+       * <code>string file = 4;</code>
        */
       public com.google.protobuf.ByteString
           getFileBytes() {
@@ -804,12 +1095,6 @@ public final class BurpMessages {
         }
       }
 
-      private void initFields() {
-        protocol_ = "";
-        host_ = "";
-        port_ = 0;
-        file_ = "";
-      }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -822,54 +1107,83 @@ public final class BurpMessages {
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        getSerializedSize();
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeBytes(1, getProtocolBytes());
+        if (!getProtocolBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, protocol_);
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          output.writeBytes(2, getHostBytes());
+        if (!getHostBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, host_);
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (port_ != 0) {
           output.writeInt32(3, port_);
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          output.writeBytes(4, getFileBytes());
+        if (!getFileBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, file_);
         }
-        getUnknownFields().writeTo(output);
       }
 
-      private int memoizedSerializedSize = -1;
       public int getSerializedSize() {
-        int size = memoizedSerializedSize;
+        int size = memoizedSize;
         if (size != -1) return size;
 
         size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(1, getProtocolBytes());
+        if (!getProtocolBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, protocol_);
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(2, getHostBytes());
+        if (!getHostBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, host_);
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (port_ != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(3, port_);
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(4, getFileBytes());
+        if (!getFileBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, file_);
         }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSerializedSize = size;
+        memoizedSize = size;
         return size;
       }
 
       private static final long serialVersionUID = 0L;
       @java.lang.Override
-      protected java.lang.Object writeReplace()
-          throws java.io.ObjectStreamException {
-        return super.writeReplace();
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL)) {
+          return super.equals(obj);
+        }
+        space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL other = (space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL) obj;
+
+        boolean result = true;
+        result = result && getProtocol()
+            .equals(other.getProtocol());
+        result = result && getHost()
+            .equals(other.getHost());
+        result = result && (getPort()
+            == other.getPort());
+        result = result && getFile()
+            .equals(other.getFile());
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + PROTOCOL_FIELD_NUMBER;
+        hash = (53 * hash) + getProtocol().hashCode();
+        hash = (37 * hash) + HOST_FIELD_NUMBER;
+        hash = (53 * hash) + getHost().hashCode();
+        hash = (37 * hash) + PORT_FIELD_NUMBER;
+        hash = (53 * hash) + getPort();
+        hash = (37 * hash) + FILE_FIELD_NUMBER;
+        hash = (53 * hash) + getFile().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
       }
 
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL parseFrom(
@@ -895,46 +1209,57 @@ public final class BurpMessages {
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
-      public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL prototype) {
-        return newBuilder().mergeFrom(prototype);
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
       }
-      public Builder toBuilder() { return newBuilder(this); }
+      public static Builder newBuilder(space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -942,7 +1267,7 @@ public final class BurpMessages {
        * Protobuf type {@code space.polylog.burp.BurpRequest.URL}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:space.polylog.burp.BurpRequest.URL)
           space.polylog.burp.protobuf.BurpMessages.BurpRequest.URLOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
@@ -950,7 +1275,7 @@ public final class BurpMessages {
           return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_URL_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_URL_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -963,33 +1288,26 @@ public final class BurpMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
           }
         }
-        private static Builder create() {
-          return new Builder();
-        }
-
         public Builder clear() {
           super.clear();
           protocol_ = "";
-          bitField0_ = (bitField0_ & ~0x00000001);
-          host_ = "";
-          bitField0_ = (bitField0_ & ~0x00000002);
-          port_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000004);
-          file_ = "";
-          bitField0_ = (bitField0_ & ~0x00000008);
-          return this;
-        }
 
-        public Builder clone() {
-          return create().mergeFrom(buildPartial());
+          host_ = "";
+
+          port_ = 0;
+
+          file_ = "";
+
+          return this;
         }
 
         public com.google.protobuf.Descriptors.Descriptor
@@ -1011,29 +1329,40 @@ public final class BurpMessages {
 
         public space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL buildPartial() {
           space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL result = new space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
           result.protocol_ = protocol_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
           result.host_ = host_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000004;
-          }
           result.port_ = port_;
-          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-            to_bitField0_ |= 0x00000008;
-          }
           result.file_ = file_;
-          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
 
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL) {
             return mergeFrom((space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL)other);
@@ -1045,25 +1374,22 @@ public final class BurpMessages {
 
         public Builder mergeFrom(space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL other) {
           if (other == space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.getDefaultInstance()) return this;
-          if (other.hasProtocol()) {
-            bitField0_ |= 0x00000001;
+          if (!other.getProtocol().isEmpty()) {
             protocol_ = other.protocol_;
             onChanged();
           }
-          if (other.hasHost()) {
-            bitField0_ |= 0x00000002;
+          if (!other.getHost().isEmpty()) {
             host_ = other.host_;
             onChanged();
           }
-          if (other.hasPort()) {
+          if (other.getPort() != 0) {
             setPort(other.getPort());
           }
-          if (other.hasFile()) {
-            bitField0_ |= 0x00000008;
+          if (!other.getFile().isEmpty()) {
             file_ = other.file_;
             onChanged();
           }
-          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
           return this;
         }
 
@@ -1080,7 +1406,7 @@ public final class BurpMessages {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -1088,17 +1414,10 @@ public final class BurpMessages {
           }
           return this;
         }
-        private int bitField0_;
 
         private java.lang.Object protocol_ = "";
         /**
-         * <code>optional string protocol = 1;</code>
-         */
-        public boolean hasProtocol() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-        /**
-         * <code>optional string protocol = 1;</code>
+         * <code>string protocol = 1;</code>
          */
         public java.lang.String getProtocol() {
           java.lang.Object ref = protocol_;
@@ -1106,16 +1425,14 @@ public final class BurpMessages {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              protocol_ = s;
-            }
+            protocol_ = s;
             return s;
           } else {
             return (java.lang.String) ref;
           }
         }
         /**
-         * <code>optional string protocol = 1;</code>
+         * <code>string protocol = 1;</code>
          */
         public com.google.protobuf.ByteString
             getProtocolBytes() {
@@ -1131,36 +1448,37 @@ public final class BurpMessages {
           }
         }
         /**
-         * <code>optional string protocol = 1;</code>
+         * <code>string protocol = 1;</code>
          */
         public Builder setProtocol(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
+  
           protocol_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string protocol = 1;</code>
+         * <code>string protocol = 1;</code>
          */
         public Builder clearProtocol() {
-          bitField0_ = (bitField0_ & ~0x00000001);
+          
           protocol_ = getDefaultInstance().getProtocol();
           onChanged();
           return this;
         }
         /**
-         * <code>optional string protocol = 1;</code>
+         * <code>string protocol = 1;</code>
          */
         public Builder setProtocolBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
+  checkByteStringIsUtf8(value);
+          
           protocol_ = value;
           onChanged();
           return this;
@@ -1168,13 +1486,7 @@ public final class BurpMessages {
 
         private java.lang.Object host_ = "";
         /**
-         * <code>optional string host = 2;</code>
-         */
-        public boolean hasHost() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-        /**
-         * <code>optional string host = 2;</code>
+         * <code>string host = 2;</code>
          */
         public java.lang.String getHost() {
           java.lang.Object ref = host_;
@@ -1182,16 +1494,14 @@ public final class BurpMessages {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              host_ = s;
-            }
+            host_ = s;
             return s;
           } else {
             return (java.lang.String) ref;
           }
         }
         /**
-         * <code>optional string host = 2;</code>
+         * <code>string host = 2;</code>
          */
         public com.google.protobuf.ByteString
             getHostBytes() {
@@ -1207,36 +1517,37 @@ public final class BurpMessages {
           }
         }
         /**
-         * <code>optional string host = 2;</code>
+         * <code>string host = 2;</code>
          */
         public Builder setHost(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  
           host_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string host = 2;</code>
+         * <code>string host = 2;</code>
          */
         public Builder clearHost() {
-          bitField0_ = (bitField0_ & ~0x00000002);
+          
           host_ = getDefaultInstance().getHost();
           onChanged();
           return this;
         }
         /**
-         * <code>optional string host = 2;</code>
+         * <code>string host = 2;</code>
          */
         public Builder setHostBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  checkByteStringIsUtf8(value);
+          
           host_ = value;
           onChanged();
           return this;
@@ -1244,31 +1555,25 @@ public final class BurpMessages {
 
         private int port_ ;
         /**
-         * <code>optional int32 port = 3;</code>
-         */
-        public boolean hasPort() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-        /**
-         * <code>optional int32 port = 3;</code>
+         * <code>int32 port = 3;</code>
          */
         public int getPort() {
           return port_;
         }
         /**
-         * <code>optional int32 port = 3;</code>
+         * <code>int32 port = 3;</code>
          */
         public Builder setPort(int value) {
-          bitField0_ |= 0x00000004;
+          
           port_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional int32 port = 3;</code>
+         * <code>int32 port = 3;</code>
          */
         public Builder clearPort() {
-          bitField0_ = (bitField0_ & ~0x00000004);
+          
           port_ = 0;
           onChanged();
           return this;
@@ -1276,13 +1581,7 @@ public final class BurpMessages {
 
         private java.lang.Object file_ = "";
         /**
-         * <code>optional string file = 4;</code>
-         */
-        public boolean hasFile() {
-          return ((bitField0_ & 0x00000008) == 0x00000008);
-        }
-        /**
-         * <code>optional string file = 4;</code>
+         * <code>string file = 4;</code>
          */
         public java.lang.String getFile() {
           java.lang.Object ref = file_;
@@ -1290,16 +1589,14 @@ public final class BurpMessages {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              file_ = s;
-            }
+            file_ = s;
             return s;
           } else {
             return (java.lang.String) ref;
           }
         }
         /**
-         * <code>optional string file = 4;</code>
+         * <code>string file = 4;</code>
          */
         public com.google.protobuf.ByteString
             getFileBytes() {
@@ -1315,50 +1612,88 @@ public final class BurpMessages {
           }
         }
         /**
-         * <code>optional string file = 4;</code>
+         * <code>string file = 4;</code>
          */
         public Builder setFile(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  
           file_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string file = 4;</code>
+         * <code>string file = 4;</code>
          */
         public Builder clearFile() {
-          bitField0_ = (bitField0_ & ~0x00000008);
+          
           file_ = getDefaultInstance().getFile();
           onChanged();
           return this;
         }
         /**
-         * <code>optional string file = 4;</code>
+         * <code>string file = 4;</code>
          */
         public Builder setFileBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  checkByteStringIsUtf8(value);
+          
           file_ = value;
           onChanged();
           return this;
         }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
 
         // @@protoc_insertion_point(builder_scope:space.polylog.burp.BurpRequest.URL)
       }
 
+      // @@protoc_insertion_point(class_scope:space.polylog.burp.BurpRequest.URL)
+      private static final space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL DEFAULT_INSTANCE;
       static {
-        defaultInstance = new URL(true);
-        defaultInstance.initFields();
+        DEFAULT_INSTANCE = new space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL();
       }
 
-      // @@protoc_insertion_point(class_scope:space.polylog.burp.BurpRequest.URL)
+      public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<URL>
+          PARSER = new com.google.protobuf.AbstractParser<URL>() {
+        public URL parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+            return new URL(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<URL> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<URL> getParserForType() {
+        return PARSER;
+      }
+
+      public space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     public interface ParameterOrBuilder extends
@@ -1366,88 +1701,68 @@ public final class BurpMessages {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required string name = 1;</code>
-       */
-      boolean hasName();
-      /**
-       * <code>required string name = 1;</code>
+       * <code>string name = 1;</code>
        */
       java.lang.String getName();
       /**
-       * <code>required string name = 1;</code>
+       * <code>string name = 1;</code>
        */
       com.google.protobuf.ByteString
           getNameBytes();
 
       /**
-       * <code>required string value = 2;</code>
-       */
-      boolean hasValue();
-      /**
-       * <code>required string value = 2;</code>
+       * <code>string value = 2;</code>
        */
       java.lang.String getValue();
       /**
-       * <code>required string value = 2;</code>
+       * <code>string value = 2;</code>
        */
       com.google.protobuf.ByteString
           getValueBytes();
 
       /**
-       * <code>required int32 type = 3;</code>
-       */
-      boolean hasType();
-      /**
-       * <code>required int32 type = 3;</code>
+       * <code>int32 type = 3;</code>
        */
       int getType();
 
       /**
-       * <code>required .space.polylog.burp.BurpRequest.State state = 4;</code>
+       * <code>.space.polylog.burp.BurpRequest.State state = 4;</code>
        */
-      boolean hasState();
+      int getStateValue();
       /**
-       * <code>required .space.polylog.burp.BurpRequest.State state = 4;</code>
+       * <code>.space.polylog.burp.BurpRequest.State state = 4;</code>
        */
       space.polylog.burp.protobuf.BurpMessages.BurpRequest.State getState();
     }
     /**
      * Protobuf type {@code space.polylog.burp.BurpRequest.Parameter}
      */
-    public static final class Parameter extends
-        com.google.protobuf.GeneratedMessage implements
+    public  static final class Parameter extends
+        com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:space.polylog.burp.BurpRequest.Parameter)
         ParameterOrBuilder {
       // Use Parameter.newBuilder() to construct.
-      private Parameter(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private Parameter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
-        this.unknownFields = builder.getUnknownFields();
       }
-      private Parameter(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-      private static final Parameter defaultInstance;
-      public static Parameter getDefaultInstance() {
-        return defaultInstance;
-      }
-
-      public Parameter getDefaultInstanceForType() {
-        return defaultInstance;
+      private Parameter() {
+        name_ = "";
+        value_ = "";
+        type_ = 0;
+        state_ = 0;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
-          getUnknownFields() {
-        return this.unknownFields;
+      getUnknownFields() {
+        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
       }
       private Parameter(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        initFields();
+        this();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -1457,38 +1772,32 @@ public final class BurpMessages {
                 done = true;
                 break;
               default: {
-                if (!parseUnknownField(input, unknownFields,
-                                       extensionRegistry, tag)) {
+                if (!input.skipField(tag)) {
                   done = true;
                 }
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000001;
-                name_ = bs;
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000002;
-                value_ = bs;
+                java.lang.String s = input.readStringRequireUtf8();
+
+                value_ = s;
                 break;
               }
               case 24: {
-                bitField0_ |= 0x00000004;
+
                 type_ = input.readInt32();
                 break;
               }
               case 32: {
                 int rawValue = input.readEnum();
-                space.polylog.burp.protobuf.BurpMessages.BurpRequest.State value = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.valueOf(rawValue);
-                if (value == null) {
-                  unknownFields.mergeVarintField(4, rawValue);
-                } else {
-                  bitField0_ |= 0x00000008;
-                  state_ = value;
-                }
+
+                state_ = rawValue;
                 break;
               }
             }
@@ -1497,9 +1806,8 @@ public final class BurpMessages {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
-              e.getMessage()).setUnfinishedMessage(this);
+              e).setUnfinishedMessage(this);
         } finally {
-          this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
@@ -1508,39 +1816,17 @@ public final class BurpMessages {
         return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_Parameter_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_Parameter_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter.class, space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<Parameter> PARSER =
-          new com.google.protobuf.AbstractParser<Parameter>() {
-        public Parameter parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Parameter(input, extensionRegistry);
-        }
-      };
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Parameter> getParserForType() {
-        return PARSER;
-      }
-
-      private int bitField0_;
       public static final int NAME_FIELD_NUMBER = 1;
-      private java.lang.Object name_;
+      private volatile java.lang.Object name_;
       /**
-       * <code>required string name = 1;</code>
-       */
-      public boolean hasName() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required string name = 1;</code>
+       * <code>string name = 1;</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1550,14 +1836,12 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
+          name_ = s;
           return s;
         }
       }
       /**
-       * <code>required string name = 1;</code>
+       * <code>string name = 1;</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1574,15 +1858,9 @@ public final class BurpMessages {
       }
 
       public static final int VALUE_FIELD_NUMBER = 2;
-      private java.lang.Object value_;
+      private volatile java.lang.Object value_;
       /**
-       * <code>required string value = 2;</code>
-       */
-      public boolean hasValue() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string value = 2;</code>
+       * <code>string value = 2;</code>
        */
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
@@ -1592,14 +1870,12 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            value_ = s;
-          }
+          value_ = s;
           return s;
         }
       }
       /**
-       * <code>required string value = 2;</code>
+       * <code>string value = 2;</code>
        */
       public com.google.protobuf.ByteString
           getValueBytes() {
@@ -1618,115 +1894,117 @@ public final class BurpMessages {
       public static final int TYPE_FIELD_NUMBER = 3;
       private int type_;
       /**
-       * <code>required int32 type = 3;</code>
-       */
-      public boolean hasType() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required int32 type = 3;</code>
+       * <code>int32 type = 3;</code>
        */
       public int getType() {
         return type_;
       }
 
       public static final int STATE_FIELD_NUMBER = 4;
-      private space.polylog.burp.protobuf.BurpMessages.BurpRequest.State state_;
+      private int state_;
       /**
-       * <code>required .space.polylog.burp.BurpRequest.State state = 4;</code>
+       * <code>.space.polylog.burp.BurpRequest.State state = 4;</code>
        */
-      public boolean hasState() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>required .space.polylog.burp.BurpRequest.State state = 4;</code>
-       */
-      public space.polylog.burp.protobuf.BurpMessages.BurpRequest.State getState() {
+      public int getStateValue() {
         return state_;
       }
-
-      private void initFields() {
-        name_ = "";
-        value_ = "";
-        type_ = 0;
-        state_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED;
+      /**
+       * <code>.space.polylog.burp.BurpRequest.State state = 4;</code>
+       */
+      public space.polylog.burp.protobuf.BurpMessages.BurpRequest.State getState() {
+        space.polylog.burp.protobuf.BurpMessages.BurpRequest.State result = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.valueOf(state_);
+        return result == null ? space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNRECOGNIZED : result;
       }
+
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
         if (isInitialized == 0) return false;
 
-        if (!hasName()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasValue()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasType()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasState()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
         memoizedIsInitialized = 1;
         return true;
       }
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        getSerializedSize();
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeBytes(1, getNameBytes());
+        if (!getNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          output.writeBytes(2, getValueBytes());
+        if (!getValueBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (type_ != 0) {
           output.writeInt32(3, type_);
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          output.writeEnum(4, state_.getNumber());
+        if (state_ != space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED.getNumber()) {
+          output.writeEnum(4, state_);
         }
-        getUnknownFields().writeTo(output);
       }
 
-      private int memoizedSerializedSize = -1;
       public int getSerializedSize() {
-        int size = memoizedSerializedSize;
+        int size = memoizedSize;
         if (size != -1) return size;
 
         size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(1, getNameBytes());
+        if (!getNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(2, getValueBytes());
+        if (!getValueBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (type_ != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(3, type_);
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (state_ != space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
-            .computeEnumSize(4, state_.getNumber());
+            .computeEnumSize(4, state_);
         }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSerializedSize = size;
+        memoizedSize = size;
         return size;
       }
 
       private static final long serialVersionUID = 0L;
       @java.lang.Override
-      protected java.lang.Object writeReplace()
-          throws java.io.ObjectStreamException {
-        return super.writeReplace();
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter)) {
+          return super.equals(obj);
+        }
+        space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter other = (space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter) obj;
+
+        boolean result = true;
+        result = result && getName()
+            .equals(other.getName());
+        result = result && getValue()
+            .equals(other.getValue());
+        result = result && (getType()
+            == other.getType());
+        result = result && state_ == other.state_;
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getType();
+        hash = (37 * hash) + STATE_FIELD_NUMBER;
+        hash = (53 * hash) + state_;
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
       }
 
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter parseFrom(
@@ -1752,46 +2030,57 @@ public final class BurpMessages {
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
-      public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter prototype) {
-        return newBuilder().mergeFrom(prototype);
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
       }
-      public Builder toBuilder() { return newBuilder(this); }
+      public static Builder newBuilder(space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -1799,7 +2088,7 @@ public final class BurpMessages {
        * Protobuf type {@code space.polylog.burp.BurpRequest.Parameter}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:space.polylog.burp.BurpRequest.Parameter)
           space.polylog.burp.protobuf.BurpMessages.BurpRequest.ParameterOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
@@ -1807,7 +2096,7 @@ public final class BurpMessages {
           return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_Parameter_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_Parameter_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -1820,33 +2109,26 @@ public final class BurpMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
           }
         }
-        private static Builder create() {
-          return new Builder();
-        }
-
         public Builder clear() {
           super.clear();
           name_ = "";
-          bitField0_ = (bitField0_ & ~0x00000001);
-          value_ = "";
-          bitField0_ = (bitField0_ & ~0x00000002);
-          type_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000004);
-          state_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED;
-          bitField0_ = (bitField0_ & ~0x00000008);
-          return this;
-        }
 
-        public Builder clone() {
-          return create().mergeFrom(buildPartial());
+          value_ = "";
+
+          type_ = 0;
+
+          state_ = 0;
+
+          return this;
         }
 
         public com.google.protobuf.Descriptors.Descriptor
@@ -1868,29 +2150,40 @@ public final class BurpMessages {
 
         public space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter buildPartial() {
           space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter result = new space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
           result.name_ = name_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
           result.value_ = value_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000004;
-          }
           result.type_ = type_;
-          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-            to_bitField0_ |= 0x00000008;
-          }
           result.state_ = state_;
-          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
 
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter) {
             return mergeFrom((space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter)other);
@@ -1902,43 +2195,25 @@ public final class BurpMessages {
 
         public Builder mergeFrom(space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter other) {
           if (other == space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter.getDefaultInstance()) return this;
-          if (other.hasName()) {
-            bitField0_ |= 0x00000001;
+          if (!other.getName().isEmpty()) {
             name_ = other.name_;
             onChanged();
           }
-          if (other.hasValue()) {
-            bitField0_ |= 0x00000002;
+          if (!other.getValue().isEmpty()) {
             value_ = other.value_;
             onChanged();
           }
-          if (other.hasType()) {
+          if (other.getType() != 0) {
             setType(other.getType());
           }
-          if (other.hasState()) {
-            setState(other.getState());
+          if (other.state_ != 0) {
+            setStateValue(other.getStateValue());
           }
-          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
           return this;
         }
 
         public final boolean isInitialized() {
-          if (!hasName()) {
-            
-            return false;
-          }
-          if (!hasValue()) {
-            
-            return false;
-          }
-          if (!hasType()) {
-            
-            return false;
-          }
-          if (!hasState()) {
-            
-            return false;
-          }
           return true;
         }
 
@@ -1951,7 +2226,7 @@ public final class BurpMessages {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -1959,17 +2234,10 @@ public final class BurpMessages {
           }
           return this;
         }
-        private int bitField0_;
 
         private java.lang.Object name_ = "";
         /**
-         * <code>required string name = 1;</code>
-         */
-        public boolean hasName() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-        /**
-         * <code>required string name = 1;</code>
+         * <code>string name = 1;</code>
          */
         public java.lang.String getName() {
           java.lang.Object ref = name_;
@@ -1977,16 +2245,14 @@ public final class BurpMessages {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              name_ = s;
-            }
+            name_ = s;
             return s;
           } else {
             return (java.lang.String) ref;
           }
         }
         /**
-         * <code>required string name = 1;</code>
+         * <code>string name = 1;</code>
          */
         public com.google.protobuf.ByteString
             getNameBytes() {
@@ -2002,36 +2268,37 @@ public final class BurpMessages {
           }
         }
         /**
-         * <code>required string name = 1;</code>
+         * <code>string name = 1;</code>
          */
         public Builder setName(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
+  
           name_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>required string name = 1;</code>
+         * <code>string name = 1;</code>
          */
         public Builder clearName() {
-          bitField0_ = (bitField0_ & ~0x00000001);
+          
           name_ = getDefaultInstance().getName();
           onChanged();
           return this;
         }
         /**
-         * <code>required string name = 1;</code>
+         * <code>string name = 1;</code>
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
+  checkByteStringIsUtf8(value);
+          
           name_ = value;
           onChanged();
           return this;
@@ -2039,13 +2306,7 @@ public final class BurpMessages {
 
         private java.lang.Object value_ = "";
         /**
-         * <code>required string value = 2;</code>
-         */
-        public boolean hasValue() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-        /**
-         * <code>required string value = 2;</code>
+         * <code>string value = 2;</code>
          */
         public java.lang.String getValue() {
           java.lang.Object ref = value_;
@@ -2053,16 +2314,14 @@ public final class BurpMessages {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              value_ = s;
-            }
+            value_ = s;
             return s;
           } else {
             return (java.lang.String) ref;
           }
         }
         /**
-         * <code>required string value = 2;</code>
+         * <code>string value = 2;</code>
          */
         public com.google.protobuf.ByteString
             getValueBytes() {
@@ -2078,36 +2337,37 @@ public final class BurpMessages {
           }
         }
         /**
-         * <code>required string value = 2;</code>
+         * <code>string value = 2;</code>
          */
         public Builder setValue(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  
           value_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>required string value = 2;</code>
+         * <code>string value = 2;</code>
          */
         public Builder clearValue() {
-          bitField0_ = (bitField0_ & ~0x00000002);
+          
           value_ = getDefaultInstance().getValue();
           onChanged();
           return this;
         }
         /**
-         * <code>required string value = 2;</code>
+         * <code>string value = 2;</code>
          */
         public Builder setValueBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  checkByteStringIsUtf8(value);
+          
           value_ = value;
           onChanged();
           return this;
@@ -2115,80 +2375,120 @@ public final class BurpMessages {
 
         private int type_ ;
         /**
-         * <code>required int32 type = 3;</code>
-         */
-        public boolean hasType() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-        /**
-         * <code>required int32 type = 3;</code>
+         * <code>int32 type = 3;</code>
          */
         public int getType() {
           return type_;
         }
         /**
-         * <code>required int32 type = 3;</code>
+         * <code>int32 type = 3;</code>
          */
         public Builder setType(int value) {
-          bitField0_ |= 0x00000004;
+          
           type_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>required int32 type = 3;</code>
+         * <code>int32 type = 3;</code>
          */
         public Builder clearType() {
-          bitField0_ = (bitField0_ & ~0x00000004);
+          
           type_ = 0;
           onChanged();
           return this;
         }
 
-        private space.polylog.burp.protobuf.BurpMessages.BurpRequest.State state_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED;
+        private int state_ = 0;
         /**
-         * <code>required .space.polylog.burp.BurpRequest.State state = 4;</code>
+         * <code>.space.polylog.burp.BurpRequest.State state = 4;</code>
          */
-        public boolean hasState() {
-          return ((bitField0_ & 0x00000008) == 0x00000008);
-        }
-        /**
-         * <code>required .space.polylog.burp.BurpRequest.State state = 4;</code>
-         */
-        public space.polylog.burp.protobuf.BurpMessages.BurpRequest.State getState() {
+        public int getStateValue() {
           return state_;
         }
         /**
-         * <code>required .space.polylog.burp.BurpRequest.State state = 4;</code>
+         * <code>.space.polylog.burp.BurpRequest.State state = 4;</code>
          */
-        public Builder setState(space.polylog.burp.protobuf.BurpMessages.BurpRequest.State value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          bitField0_ |= 0x00000008;
+        public Builder setStateValue(int value) {
           state_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>required .space.polylog.burp.BurpRequest.State state = 4;</code>
+         * <code>.space.polylog.burp.BurpRequest.State state = 4;</code>
          */
-        public Builder clearState() {
-          bitField0_ = (bitField0_ & ~0x00000008);
-          state_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED;
+        public space.polylog.burp.protobuf.BurpMessages.BurpRequest.State getState() {
+          space.polylog.burp.protobuf.BurpMessages.BurpRequest.State result = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.valueOf(state_);
+          return result == null ? space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNRECOGNIZED : result;
+        }
+        /**
+         * <code>.space.polylog.burp.BurpRequest.State state = 4;</code>
+         */
+        public Builder setState(space.polylog.burp.protobuf.BurpMessages.BurpRequest.State value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          state_ = value.getNumber();
           onChanged();
           return this;
         }
+        /**
+         * <code>.space.polylog.burp.BurpRequest.State state = 4;</code>
+         */
+        public Builder clearState() {
+          
+          state_ = 0;
+          onChanged();
+          return this;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
 
         // @@protoc_insertion_point(builder_scope:space.polylog.burp.BurpRequest.Parameter)
       }
 
+      // @@protoc_insertion_point(class_scope:space.polylog.burp.BurpRequest.Parameter)
+      private static final space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter DEFAULT_INSTANCE;
       static {
-        defaultInstance = new Parameter(true);
-        defaultInstance.initFields();
+        DEFAULT_INSTANCE = new space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter();
       }
 
-      // @@protoc_insertion_point(class_scope:space.polylog.burp.BurpRequest.Parameter)
+      public static space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Parameter>
+          PARSER = new com.google.protobuf.AbstractParser<Parameter>() {
+        public Parameter parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Parameter(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Parameter> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Parameter> getParserForType() {
+        return PARSER;
+      }
+
+      public space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     private int bitField0_;
@@ -2224,34 +2524,28 @@ public final class BurpMessages {
     public static final int URL_FIELD_NUMBER = 2;
     private space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL url_;
     /**
-     * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+     * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
      */
     public boolean hasUrl() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
+      return url_ != null;
     }
     /**
-     * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+     * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
      */
     public space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL getUrl() {
-      return url_;
+      return url_ == null ? space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.getDefaultInstance() : url_;
     }
     /**
-     * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+     * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
      */
     public space.polylog.burp.protobuf.BurpMessages.BurpRequest.URLOrBuilder getUrlOrBuilder() {
-      return url_;
+      return getUrl();
     }
 
     public static final int REQUESTMETHOD_FIELD_NUMBER = 3;
-    private java.lang.Object requestMethod_;
+    private volatile java.lang.Object requestMethod_;
     /**
-     * <code>required string requestMethod = 3;</code>
-     */
-    public boolean hasRequestMethod() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required string requestMethod = 3;</code>
+     * <code>string requestMethod = 3;</code>
      */
     public java.lang.String getRequestMethod() {
       java.lang.Object ref = requestMethod_;
@@ -2261,14 +2555,12 @@ public final class BurpMessages {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          requestMethod_ = s;
-        }
+        requestMethod_ = s;
         return s;
       }
     }
     /**
-     * <code>required string requestMethod = 3;</code>
+     * <code>string requestMethod = 3;</code>
      */
     public com.google.protobuf.ByteString
         getRequestMethodBytes() {
@@ -2320,45 +2612,41 @@ public final class BurpMessages {
     }
 
     public static final int STATE_FIELD_NUMBER = 5;
-    private space.polylog.burp.protobuf.BurpMessages.BurpRequest.State state_;
+    private int state_;
     /**
-     * <code>required .space.polylog.burp.BurpRequest.State state = 5;</code>
+     * <code>.space.polylog.burp.BurpRequest.State state = 5;</code>
      */
-    public boolean hasState() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+    public int getStateValue() {
+      return state_;
     }
     /**
-     * <code>required .space.polylog.burp.BurpRequest.State state = 5;</code>
+     * <code>.space.polylog.burp.BurpRequest.State state = 5;</code>
      */
     public space.polylog.burp.protobuf.BurpMessages.BurpRequest.State getState() {
-      return state_;
+      space.polylog.burp.protobuf.BurpMessages.BurpRequest.State result = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.valueOf(state_);
+      return result == null ? space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNRECOGNIZED : result;
     }
 
     public static final int CONTENTTYPE_FIELD_NUMBER = 6;
-    private space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType contentType_;
+    private int contentType_;
     /**
-     * <code>required .space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
+     * <code>.space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
      */
-    public boolean hasContentType() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>required .space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
-     */
-    public space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType getContentType() {
+    public int getContentTypeValue() {
       return contentType_;
     }
-
-    public static final int BASE64BODY_FIELD_NUMBER = 57;
-    private java.lang.Object base64Body_;
     /**
-     * <code>optional string base64Body = 57;</code>
+     * <code>.space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
      */
-    public boolean hasBase64Body() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+    public space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType getContentType() {
+      space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType result = space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType.valueOf(contentType_);
+      return result == null ? space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType.UNRECOGNIZED : result;
     }
+
+    public static final int BASE64BODY_FIELD_NUMBER = 7;
+    private volatile java.lang.Object base64Body_;
     /**
-     * <code>optional string base64Body = 57;</code>
+     * <code>string base64Body = 7;</code>
      */
     public java.lang.String getBase64Body() {
       java.lang.Object ref = base64Body_;
@@ -2368,14 +2656,12 @@ public final class BurpMessages {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          base64Body_ = s;
-        }
+        base64Body_ = s;
         return s;
       }
     }
     /**
-     * <code>optional string base64Body = 57;</code>
+     * <code>string base64Body = 7;</code>
      */
     public com.google.protobuf.ByteString
         getBase64BodyBytes() {
@@ -2391,123 +2677,140 @@ public final class BurpMessages {
       }
     }
 
-    private void initFields() {
-      headers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      url_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.getDefaultInstance();
-      requestMethod_ = "";
-      parameters_ = java.util.Collections.emptyList();
-      state_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED;
-      contentType_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType.CONTENT_TYPE_NONE;
-      base64Body_ = "";
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasUrl()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasRequestMethod()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasState()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasContentType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      for (int i = 0; i < getParametersCount(); i++) {
-        if (!getParameters(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       memoizedIsInitialized = 1;
       return true;
     }
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       for (int i = 0; i < headers_.size(); i++) {
-        output.writeBytes(1, headers_.getByteString(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, headers_.getRaw(i));
       }
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(2, url_);
+      if (url_ != null) {
+        output.writeMessage(2, getUrl());
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(3, getRequestMethodBytes());
+      if (!getRequestMethodBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, requestMethod_);
       }
       for (int i = 0; i < parameters_.size(); i++) {
         output.writeMessage(4, parameters_.get(i));
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeEnum(5, state_.getNumber());
+      if (state_ != space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED.getNumber()) {
+        output.writeEnum(5, state_);
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeEnum(6, contentType_.getNumber());
+      if (contentType_ != space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType.CONTENT_TYPE_NONE.getNumber()) {
+        output.writeEnum(6, contentType_);
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBytes(57, getBase64BodyBytes());
+      if (!getBase64BodyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, base64Body_);
       }
-      getUnknownFields().writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       {
         int dataSize = 0;
         for (int i = 0; i < headers_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(headers_.getByteString(i));
+          dataSize += computeStringSizeNoTag(headers_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getHeadersList().size();
       }
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (url_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, url_);
+          .computeMessageSize(2, getUrl());
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getRequestMethodBytes());
+      if (!getRequestMethodBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, requestMethod_);
       }
       for (int i = 0; i < parameters_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, parameters_.get(i));
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (state_ != space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, state_.getNumber());
+          .computeEnumSize(5, state_);
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (contentType_ != space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType.CONTENT_TYPE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(6, contentType_.getNumber());
+          .computeEnumSize(6, contentType_);
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(57, getBase64BodyBytes());
+      if (!getBase64BodyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, base64Body_);
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
     @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof space.polylog.burp.protobuf.BurpMessages.BurpRequest)) {
+        return super.equals(obj);
+      }
+      space.polylog.burp.protobuf.BurpMessages.BurpRequest other = (space.polylog.burp.protobuf.BurpMessages.BurpRequest) obj;
+
+      boolean result = true;
+      result = result && getHeadersList()
+          .equals(other.getHeadersList());
+      result = result && (hasUrl() == other.hasUrl());
+      if (hasUrl()) {
+        result = result && getUrl()
+            .equals(other.getUrl());
+      }
+      result = result && getRequestMethod()
+          .equals(other.getRequestMethod());
+      result = result && getParametersList()
+          .equals(other.getParametersList());
+      result = result && state_ == other.state_;
+      result = result && contentType_ == other.contentType_;
+      result = result && getBase64Body()
+          .equals(other.getBase64Body());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getHeadersCount() > 0) {
+        hash = (37 * hash) + HEADERS_FIELD_NUMBER;
+        hash = (53 * hash) + getHeadersList().hashCode();
+      }
+      if (hasUrl()) {
+        hash = (37 * hash) + URL_FIELD_NUMBER;
+        hash = (53 * hash) + getUrl().hashCode();
+      }
+      hash = (37 * hash) + REQUESTMETHOD_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestMethod().hashCode();
+      if (getParametersCount() > 0) {
+        hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + getParametersList().hashCode();
+      }
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      hash = (37 * hash) + CONTENTTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + contentType_;
+      hash = (37 * hash) + BASE64BODY_FIELD_NUMBER;
+      hash = (53 * hash) + getBase64Body().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static space.polylog.burp.protobuf.BurpMessages.BurpRequest parseFrom(
@@ -2533,46 +2836,57 @@ public final class BurpMessages {
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(space.polylog.burp.protobuf.BurpMessages.BurpRequest prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(space.polylog.burp.protobuf.BurpMessages.BurpRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2580,7 +2894,7 @@ public final class BurpMessages {
      * Protobuf type {@code space.polylog.burp.BurpRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:space.polylog.burp.BurpRequest)
         space.polylog.burp.protobuf.BurpMessages.BurpRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
@@ -2588,7 +2902,7 @@ public final class BurpMessages {
         return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -2601,49 +2915,41 @@ public final class BurpMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getUrlFieldBuilder();
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getParametersFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         headers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (urlBuilder_ == null) {
-          url_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.getDefaultInstance();
+          url_ = null;
         } else {
-          urlBuilder_.clear();
+          url_ = null;
+          urlBuilder_ = null;
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         requestMethod_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
+
         if (parametersBuilder_ == null) {
           parameters_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           parametersBuilder_.clear();
         }
-        state_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        contentType_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType.CONTENT_TYPE_NONE;
-        bitField0_ = (bitField0_ & ~0x00000020);
-        base64Body_ = "";
-        bitField0_ = (bitField0_ & ~0x00000040);
-        return this;
-      }
+        state_ = 0;
 
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
+        contentType_ = 0;
+
+        base64Body_ = "";
+
+        return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -2672,16 +2978,10 @@ public final class BurpMessages {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.headers_ = headers_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000001;
-        }
         if (urlBuilder_ == null) {
           result.url_ = url_;
         } else {
           result.url_ = urlBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000002;
         }
         result.requestMethod_ = requestMethod_;
         if (parametersBuilder_ == null) {
@@ -2693,23 +2993,40 @@ public final class BurpMessages {
         } else {
           result.parameters_ = parametersBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000004;
-        }
         result.state_ = state_;
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000008;
-        }
         result.contentType_ = contentType_;
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000010;
-        }
         result.base64Body_ = base64Body_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof space.polylog.burp.protobuf.BurpMessages.BurpRequest) {
           return mergeFrom((space.polylog.burp.protobuf.BurpMessages.BurpRequest)other);
@@ -2734,8 +3051,7 @@ public final class BurpMessages {
         if (other.hasUrl()) {
           mergeUrl(other.getUrl());
         }
-        if (other.hasRequestMethod()) {
-          bitField0_ |= 0x00000004;
+        if (!other.getRequestMethod().isEmpty()) {
           requestMethod_ = other.requestMethod_;
           onChanged();
         }
@@ -2758,51 +3074,28 @@ public final class BurpMessages {
               parameters_ = other.parameters_;
               bitField0_ = (bitField0_ & ~0x00000008);
               parametersBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getParametersFieldBuilder() : null;
             } else {
               parametersBuilder_.addAllMessages(other.parameters_);
             }
           }
         }
-        if (other.hasState()) {
-          setState(other.getState());
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
         }
-        if (other.hasContentType()) {
-          setContentType(other.getContentType());
+        if (other.contentType_ != 0) {
+          setContentTypeValue(other.getContentTypeValue());
         }
-        if (other.hasBase64Body()) {
-          bitField0_ |= 0x00000040;
+        if (!other.getBase64Body().isEmpty()) {
           base64Body_ = other.base64Body_;
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
-        if (!hasUrl()) {
-          
-          return false;
-        }
-        if (!hasRequestMethod()) {
-          
-          return false;
-        }
-        if (!hasState()) {
-          
-          return false;
-        }
-        if (!hasContentType()) {
-          
-          return false;
-        }
-        for (int i = 0; i < getParametersCount(); i++) {
-          if (!getParameters(i).isInitialized()) {
-            
-            return false;
-          }
-        }
         return true;
       }
 
@@ -2815,7 +3108,7 @@ public final class BurpMessages {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (space.polylog.burp.protobuf.BurpMessages.BurpRequest) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -2912,33 +3205,34 @@ public final class BurpMessages {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureHeadersIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureHeadersIsMutable();
         headers_.add(value);
         onChanged();
         return this;
       }
 
-      private space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL url_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL url_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL, space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.Builder, space.polylog.burp.protobuf.BurpMessages.BurpRequest.URLOrBuilder> urlBuilder_;
       /**
-       * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+       * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
        */
       public boolean hasUrl() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+        return urlBuilder_ != null || url_ != null;
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+       * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
        */
       public space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL getUrl() {
         if (urlBuilder_ == null) {
-          return url_;
+          return url_ == null ? space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.getDefaultInstance() : url_;
         } else {
           return urlBuilder_.getMessage();
         }
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+       * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
        */
       public Builder setUrl(space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL value) {
         if (urlBuilder_ == null) {
@@ -2950,11 +3244,11 @@ public final class BurpMessages {
         } else {
           urlBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
+
         return this;
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+       * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
        */
       public Builder setUrl(
           space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.Builder builderForValue) {
@@ -2964,16 +3258,15 @@ public final class BurpMessages {
         } else {
           urlBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
+
         return this;
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+       * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
        */
       public Builder mergeUrl(space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL value) {
         if (urlBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              url_ != space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.getDefaultInstance()) {
+          if (url_ != null) {
             url_ =
               space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.newBuilder(url_).mergeFrom(value).buildPartial();
           } else {
@@ -2983,48 +3276,50 @@ public final class BurpMessages {
         } else {
           urlBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
+
         return this;
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+       * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
        */
       public Builder clearUrl() {
         if (urlBuilder_ == null) {
-          url_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.getDefaultInstance();
+          url_ = null;
           onChanged();
         } else {
-          urlBuilder_.clear();
+          url_ = null;
+          urlBuilder_ = null;
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+
         return this;
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+       * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
        */
       public space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.Builder getUrlBuilder() {
-        bitField0_ |= 0x00000002;
+        
         onChanged();
         return getUrlFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+       * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
        */
       public space.polylog.burp.protobuf.BurpMessages.BurpRequest.URLOrBuilder getUrlOrBuilder() {
         if (urlBuilder_ != null) {
           return urlBuilder_.getMessageOrBuilder();
         } else {
-          return url_;
+          return url_ == null ?
+              space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.getDefaultInstance() : url_;
         }
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.URL url = 2;</code>
+       * <code>.space.polylog.burp.BurpRequest.URL url = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf.SingleFieldBuilderV3<
           space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL, space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.Builder, space.polylog.burp.protobuf.BurpMessages.BurpRequest.URLOrBuilder> 
           getUrlFieldBuilder() {
         if (urlBuilder_ == null) {
-          urlBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          urlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL, space.polylog.burp.protobuf.BurpMessages.BurpRequest.URL.Builder, space.polylog.burp.protobuf.BurpMessages.BurpRequest.URLOrBuilder>(
                   getUrl(),
                   getParentForChildren(),
@@ -3036,13 +3331,7 @@ public final class BurpMessages {
 
       private java.lang.Object requestMethod_ = "";
       /**
-       * <code>required string requestMethod = 3;</code>
-       */
-      public boolean hasRequestMethod() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required string requestMethod = 3;</code>
+       * <code>string requestMethod = 3;</code>
        */
       public java.lang.String getRequestMethod() {
         java.lang.Object ref = requestMethod_;
@@ -3050,16 +3339,14 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            requestMethod_ = s;
-          }
+          requestMethod_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>required string requestMethod = 3;</code>
+       * <code>string requestMethod = 3;</code>
        */
       public com.google.protobuf.ByteString
           getRequestMethodBytes() {
@@ -3075,36 +3362,37 @@ public final class BurpMessages {
         }
       }
       /**
-       * <code>required string requestMethod = 3;</code>
+       * <code>string requestMethod = 3;</code>
        */
       public Builder setRequestMethod(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  
         requestMethod_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string requestMethod = 3;</code>
+       * <code>string requestMethod = 3;</code>
        */
       public Builder clearRequestMethod() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         requestMethod_ = getDefaultInstance().getRequestMethod();
         onChanged();
         return this;
       }
       /**
-       * <code>required string requestMethod = 3;</code>
+       * <code>string requestMethod = 3;</code>
        */
       public Builder setRequestMethodBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  checkByteStringIsUtf8(value);
+        
         requestMethod_ = value;
         onChanged();
         return this;
@@ -3119,7 +3407,7 @@ public final class BurpMessages {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter, space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter.Builder, space.polylog.burp.protobuf.BurpMessages.BurpRequest.ParameterOrBuilder> parametersBuilder_;
 
       /**
@@ -3335,11 +3623,11 @@ public final class BurpMessages {
            getParametersBuilderList() {
         return getParametersFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter, space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter.Builder, space.polylog.burp.protobuf.BurpMessages.BurpRequest.ParameterOrBuilder> 
           getParametersFieldBuilder() {
         if (parametersBuilder_ == null) {
-          parametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          parametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter, space.polylog.burp.protobuf.BurpMessages.BurpRequest.Parameter.Builder, space.polylog.burp.protobuf.BurpMessages.BurpRequest.ParameterOrBuilder>(
                   parameters_,
                   ((bitField0_ & 0x00000008) == 0x00000008),
@@ -3350,85 +3638,97 @@ public final class BurpMessages {
         return parametersBuilder_;
       }
 
-      private space.polylog.burp.protobuf.BurpMessages.BurpRequest.State state_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED;
+      private int state_ = 0;
       /**
-       * <code>required .space.polylog.burp.BurpRequest.State state = 5;</code>
+       * <code>.space.polylog.burp.BurpRequest.State state = 5;</code>
        */
-      public boolean hasState() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>required .space.polylog.burp.BurpRequest.State state = 5;</code>
-       */
-      public space.polylog.burp.protobuf.BurpMessages.BurpRequest.State getState() {
+      public int getStateValue() {
         return state_;
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.State state = 5;</code>
+       * <code>.space.polylog.burp.BurpRequest.State state = 5;</code>
        */
-      public Builder setState(space.polylog.burp.protobuf.BurpMessages.BurpRequest.State value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000010;
+      public Builder setStateValue(int value) {
         state_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.State state = 5;</code>
+       * <code>.space.polylog.burp.BurpRequest.State state = 5;</code>
+       */
+      public space.polylog.burp.protobuf.BurpMessages.BurpRequest.State getState() {
+        space.polylog.burp.protobuf.BurpMessages.BurpRequest.State result = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.valueOf(state_);
+        return result == null ? space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.space.polylog.burp.BurpRequest.State state = 5;</code>
+       */
+      public Builder setState(space.polylog.burp.protobuf.BurpMessages.BurpRequest.State value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.space.polylog.burp.BurpRequest.State state = 5;</code>
        */
       public Builder clearState() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        state_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.State.UNMODIFIED;
+        
+        state_ = 0;
         onChanged();
         return this;
       }
 
-      private space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType contentType_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType.CONTENT_TYPE_NONE;
+      private int contentType_ = 0;
       /**
-       * <code>required .space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
+       * <code>.space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
        */
-      public boolean hasContentType() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      /**
-       * <code>required .space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
-       */
-      public space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType getContentType() {
+      public int getContentTypeValue() {
         return contentType_;
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
+       * <code>.space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
        */
-      public Builder setContentType(space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000020;
+      public Builder setContentTypeValue(int value) {
         contentType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required .space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
+       * <code>.space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
+       */
+      public space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType getContentType() {
+        space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType result = space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType.valueOf(contentType_);
+        return result == null ? space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
+       */
+      public Builder setContentType(space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        contentType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.space.polylog.burp.BurpRequest.ContentType contentType = 6;</code>
        */
       public Builder clearContentType() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        contentType_ = space.polylog.burp.protobuf.BurpMessages.BurpRequest.ContentType.CONTENT_TYPE_NONE;
+        
+        contentType_ = 0;
         onChanged();
         return this;
       }
 
       private java.lang.Object base64Body_ = "";
       /**
-       * <code>optional string base64Body = 57;</code>
-       */
-      public boolean hasBase64Body() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>optional string base64Body = 57;</code>
+       * <code>string base64Body = 7;</code>
        */
       public java.lang.String getBase64Body() {
         java.lang.Object ref = base64Body_;
@@ -3436,16 +3736,14 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            base64Body_ = s;
-          }
+          base64Body_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string base64Body = 57;</code>
+       * <code>string base64Body = 7;</code>
        */
       public com.google.protobuf.ByteString
           getBase64BodyBytes() {
@@ -3461,50 +3759,88 @@ public final class BurpMessages {
         }
       }
       /**
-       * <code>optional string base64Body = 57;</code>
+       * <code>string base64Body = 7;</code>
        */
       public Builder setBase64Body(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000040;
+  
         base64Body_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string base64Body = 57;</code>
+       * <code>string base64Body = 7;</code>
        */
       public Builder clearBase64Body() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        
         base64Body_ = getDefaultInstance().getBase64Body();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string base64Body = 57;</code>
+       * <code>string base64Body = 7;</code>
        */
       public Builder setBase64BodyBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000040;
+  checkByteStringIsUtf8(value);
+        
         base64Body_ = value;
         onChanged();
         return this;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
 
       // @@protoc_insertion_point(builder_scope:space.polylog.burp.BurpRequest)
     }
 
+    // @@protoc_insertion_point(class_scope:space.polylog.burp.BurpRequest)
+    private static final space.polylog.burp.protobuf.BurpMessages.BurpRequest DEFAULT_INSTANCE;
     static {
-      defaultInstance = new BurpRequest(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new space.polylog.burp.protobuf.BurpMessages.BurpRequest();
     }
 
-    // @@protoc_insertion_point(class_scope:space.polylog.burp.BurpRequest)
+    public static space.polylog.burp.protobuf.BurpMessages.BurpRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BurpRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BurpRequest>() {
+      public BurpRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new BurpRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BurpRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BurpRequest> getParserForType() {
+      return PARSER;
+    }
+
+    public space.polylog.burp.protobuf.BurpMessages.BurpRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
   public interface BurpResponseOrBuilder extends
@@ -3514,7 +3850,7 @@ public final class BurpMessages {
     /**
      * <code>repeated string headers = 1;</code>
      */
-    com.google.protobuf.ProtocolStringList
+    java.util.List<java.lang.String>
         getHeadersList();
     /**
      * <code>repeated string headers = 1;</code>
@@ -3555,52 +3891,36 @@ public final class BurpMessages {
         int index);
 
     /**
-     * <code>required string inferredMimeType = 3;</code>
-     */
-    boolean hasInferredMimeType();
-    /**
-     * <code>required string inferredMimeType = 3;</code>
+     * <code>string inferredMimeType = 3;</code>
      */
     java.lang.String getInferredMimeType();
     /**
-     * <code>required string inferredMimeType = 3;</code>
+     * <code>string inferredMimeType = 3;</code>
      */
     com.google.protobuf.ByteString
         getInferredMimeTypeBytes();
 
     /**
-     * <code>required string statedMimeType = 4;</code>
-     */
-    boolean hasStatedMimeType();
-    /**
-     * <code>required string statedMimeType = 4;</code>
+     * <code>string statedMimeType = 4;</code>
      */
     java.lang.String getStatedMimeType();
     /**
-     * <code>required string statedMimeType = 4;</code>
+     * <code>string statedMimeType = 4;</code>
      */
     com.google.protobuf.ByteString
         getStatedMimeTypeBytes();
 
     /**
-     * <code>required int32 statusCode = 5;</code>
-     */
-    boolean hasStatusCode();
-    /**
-     * <code>required int32 statusCode = 5;</code>
+     * <code>int32 statusCode = 5;</code>
      */
     int getStatusCode();
 
     /**
-     * <code>optional string base64Body = 6;</code>
-     */
-    boolean hasBase64Body();
-    /**
-     * <code>optional string base64Body = 6;</code>
+     * <code>string base64Body = 6;</code>
      */
     java.lang.String getBase64Body();
     /**
-     * <code>optional string base64Body = 6;</code>
+     * <code>string base64Body = 6;</code>
      */
     com.google.protobuf.ByteString
         getBase64BodyBytes();
@@ -3608,40 +3928,34 @@ public final class BurpMessages {
   /**
    * Protobuf type {@code space.polylog.burp.BurpResponse}
    */
-  public static final class BurpResponse extends
-      com.google.protobuf.GeneratedMessage implements
+  public  static final class BurpResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:space.polylog.burp.BurpResponse)
       BurpResponseOrBuilder {
     // Use BurpResponse.newBuilder() to construct.
-    private BurpResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private BurpResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private BurpResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final BurpResponse defaultInstance;
-    public static BurpResponse getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public BurpResponse getDefaultInstanceForType() {
-      return defaultInstance;
+    private BurpResponse() {
+      headers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      cookies_ = java.util.Collections.emptyList();
+      inferredMimeType_ = "";
+      statedMimeType_ = "";
+      statusCode_ = 0;
+      base64Body_ = "";
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
     private BurpResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
+      this();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3651,19 +3965,18 @@ public final class BurpMessages {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!input.skipField(tag)) {
                 done = true;
               }
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 headers_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              headers_.add(bs);
+              headers_.add(s);
               break;
             }
             case 18: {
@@ -3671,30 +3984,31 @@ public final class BurpMessages {
                 cookies_ = new java.util.ArrayList<space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              cookies_.add(input.readMessage(space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie.PARSER, extensionRegistry));
+              cookies_.add(
+                  input.readMessage(space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie.parser(), extensionRegistry));
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              inferredMimeType_ = bs;
+              java.lang.String s = input.readStringRequireUtf8();
+
+              inferredMimeType_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              statedMimeType_ = bs;
+              java.lang.String s = input.readStringRequireUtf8();
+
+              statedMimeType_ = s;
               break;
             }
             case 40: {
-              bitField0_ |= 0x00000004;
+
               statusCode_ = input.readInt32();
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
-              base64Body_ = bs;
+              java.lang.String s = input.readStringRequireUtf8();
+
+              base64Body_ = s;
               break;
             }
           }
@@ -3703,7 +4017,7 @@ public final class BurpMessages {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           headers_ = headers_.getUnmodifiableView();
@@ -3711,7 +4025,6 @@ public final class BurpMessages {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           cookies_ = java.util.Collections.unmodifiableList(cookies_);
         }
-        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -3720,26 +4033,11 @@ public final class BurpMessages {
       return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpResponse_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               space.polylog.burp.protobuf.BurpMessages.BurpResponse.class, space.polylog.burp.protobuf.BurpMessages.BurpResponse.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<BurpResponse> PARSER =
-        new com.google.protobuf.AbstractParser<BurpResponse>() {
-      public BurpResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BurpResponse(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<BurpResponse> getParserForType() {
-      return PARSER;
     }
 
     public interface CookieOrBuilder extends
@@ -3747,52 +4045,36 @@ public final class BurpMessages {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required int64 expirationDate = 1;</code>
-       */
-      boolean hasExpirationDate();
-      /**
-       * <code>required int64 expirationDate = 1;</code>
+       * <code>int64 expirationDate = 1;</code>
        */
       long getExpirationDate();
 
       /**
-       * <code>required string domain = 2;</code>
-       */
-      boolean hasDomain();
-      /**
-       * <code>required string domain = 2;</code>
+       * <code>string domain = 2;</code>
        */
       java.lang.String getDomain();
       /**
-       * <code>required string domain = 2;</code>
+       * <code>string domain = 2;</code>
        */
       com.google.protobuf.ByteString
           getDomainBytes();
 
       /**
-       * <code>required string name = 3;</code>
-       */
-      boolean hasName();
-      /**
-       * <code>required string name = 3;</code>
+       * <code>string name = 3;</code>
        */
       java.lang.String getName();
       /**
-       * <code>required string name = 3;</code>
+       * <code>string name = 3;</code>
        */
       com.google.protobuf.ByteString
           getNameBytes();
 
       /**
-       * <code>required string value = 4;</code>
-       */
-      boolean hasValue();
-      /**
-       * <code>required string value = 4;</code>
+       * <code>string value = 4;</code>
        */
       java.lang.String getValue();
       /**
-       * <code>required string value = 4;</code>
+       * <code>string value = 4;</code>
        */
       com.google.protobuf.ByteString
           getValueBytes();
@@ -3800,40 +4082,32 @@ public final class BurpMessages {
     /**
      * Protobuf type {@code space.polylog.burp.BurpResponse.Cookie}
      */
-    public static final class Cookie extends
-        com.google.protobuf.GeneratedMessage implements
+    public  static final class Cookie extends
+        com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:space.polylog.burp.BurpResponse.Cookie)
         CookieOrBuilder {
       // Use Cookie.newBuilder() to construct.
-      private Cookie(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private Cookie(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
-        this.unknownFields = builder.getUnknownFields();
       }
-      private Cookie(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-      private static final Cookie defaultInstance;
-      public static Cookie getDefaultInstance() {
-        return defaultInstance;
-      }
-
-      public Cookie getDefaultInstanceForType() {
-        return defaultInstance;
+      private Cookie() {
+        expirationDate_ = 0L;
+        domain_ = "";
+        name_ = "";
+        value_ = "";
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet
-          getUnknownFields() {
-        return this.unknownFields;
+      getUnknownFields() {
+        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
       }
       private Cookie(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        initFields();
+        this();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -3843,33 +4117,32 @@ public final class BurpMessages {
                 done = true;
                 break;
               default: {
-                if (!parseUnknownField(input, unknownFields,
-                                       extensionRegistry, tag)) {
+                if (!input.skipField(tag)) {
                   done = true;
                 }
                 break;
               }
               case 8: {
-                bitField0_ |= 0x00000001;
+
                 expirationDate_ = input.readInt64();
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000002;
-                domain_ = bs;
+                java.lang.String s = input.readStringRequireUtf8();
+
+                domain_ = s;
                 break;
               }
               case 26: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000004;
-                name_ = bs;
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
                 break;
               }
               case 34: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000008;
-                value_ = bs;
+                java.lang.String s = input.readStringRequireUtf8();
+
+                value_ = s;
                 break;
               }
             }
@@ -3878,9 +4151,8 @@ public final class BurpMessages {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
-              e.getMessage()).setUnfinishedMessage(this);
+              e).setUnfinishedMessage(this);
         } finally {
-          this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
@@ -3889,54 +4161,26 @@ public final class BurpMessages {
         return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpResponse_Cookie_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpResponse_Cookie_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie.class, space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<Cookie> PARSER =
-          new com.google.protobuf.AbstractParser<Cookie>() {
-        public Cookie parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Cookie(input, extensionRegistry);
-        }
-      };
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Cookie> getParserForType() {
-        return PARSER;
-      }
-
-      private int bitField0_;
       public static final int EXPIRATIONDATE_FIELD_NUMBER = 1;
       private long expirationDate_;
       /**
-       * <code>required int64 expirationDate = 1;</code>
-       */
-      public boolean hasExpirationDate() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required int64 expirationDate = 1;</code>
+       * <code>int64 expirationDate = 1;</code>
        */
       public long getExpirationDate() {
         return expirationDate_;
       }
 
       public static final int DOMAIN_FIELD_NUMBER = 2;
-      private java.lang.Object domain_;
+      private volatile java.lang.Object domain_;
       /**
-       * <code>required string domain = 2;</code>
-       */
-      public boolean hasDomain() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string domain = 2;</code>
+       * <code>string domain = 2;</code>
        */
       public java.lang.String getDomain() {
         java.lang.Object ref = domain_;
@@ -3946,14 +4190,12 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            domain_ = s;
-          }
+          domain_ = s;
           return s;
         }
       }
       /**
-       * <code>required string domain = 2;</code>
+       * <code>string domain = 2;</code>
        */
       public com.google.protobuf.ByteString
           getDomainBytes() {
@@ -3970,15 +4212,9 @@ public final class BurpMessages {
       }
 
       public static final int NAME_FIELD_NUMBER = 3;
-      private java.lang.Object name_;
+      private volatile java.lang.Object name_;
       /**
-       * <code>required string name = 3;</code>
-       */
-      public boolean hasName() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required string name = 3;</code>
+       * <code>string name = 3;</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3988,14 +4224,12 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
+          name_ = s;
           return s;
         }
       }
       /**
-       * <code>required string name = 3;</code>
+       * <code>string name = 3;</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4012,15 +4246,9 @@ public final class BurpMessages {
       }
 
       public static final int VALUE_FIELD_NUMBER = 4;
-      private java.lang.Object value_;
+      private volatile java.lang.Object value_;
       /**
-       * <code>required string value = 4;</code>
-       */
-      public boolean hasValue() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>required string value = 4;</code>
+       * <code>string value = 4;</code>
        */
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
@@ -4030,14 +4258,12 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            value_ = s;
-          }
+          value_ = s;
           return s;
         }
       }
       /**
-       * <code>required string value = 4;</code>
+       * <code>string value = 4;</code>
        */
       public com.google.protobuf.ByteString
           getValueBytes() {
@@ -4053,88 +4279,96 @@ public final class BurpMessages {
         }
       }
 
-      private void initFields() {
-        expirationDate_ = 0L;
-        domain_ = "";
-        name_ = "";
-        value_ = "";
-      }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
         if (isInitialized == 0) return false;
 
-        if (!hasExpirationDate()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasDomain()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasName()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasValue()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
         memoizedIsInitialized = 1;
         return true;
       }
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        getSerializedSize();
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (expirationDate_ != 0L) {
           output.writeInt64(1, expirationDate_);
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          output.writeBytes(2, getDomainBytes());
+        if (!getDomainBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domain_);
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          output.writeBytes(3, getNameBytes());
+        if (!getNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          output.writeBytes(4, getValueBytes());
+        if (!getValueBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, value_);
         }
-        getUnknownFields().writeTo(output);
       }
 
-      private int memoizedSerializedSize = -1;
       public int getSerializedSize() {
-        int size = memoizedSerializedSize;
+        int size = memoizedSize;
         if (size != -1) return size;
 
         size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (expirationDate_ != 0L) {
           size += com.google.protobuf.CodedOutputStream
             .computeInt64Size(1, expirationDate_);
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(2, getDomainBytes());
+        if (!getDomainBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domain_);
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(3, getNameBytes());
+        if (!getNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(4, getValueBytes());
+        if (!getValueBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, value_);
         }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSerializedSize = size;
+        memoizedSize = size;
         return size;
       }
 
       private static final long serialVersionUID = 0L;
       @java.lang.Override
-      protected java.lang.Object writeReplace()
-          throws java.io.ObjectStreamException {
-        return super.writeReplace();
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie)) {
+          return super.equals(obj);
+        }
+        space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie other = (space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie) obj;
+
+        boolean result = true;
+        result = result && (getExpirationDate()
+            == other.getExpirationDate());
+        result = result && getDomain()
+            .equals(other.getDomain());
+        result = result && getName()
+            .equals(other.getName());
+        result = result && getValue()
+            .equals(other.getValue());
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + EXPIRATIONDATE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getExpirationDate());
+        hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+        hash = (53 * hash) + getDomain().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
       }
 
       public static space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie parseFrom(
@@ -4160,46 +4394,57 @@ public final class BurpMessages {
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
       }
       public static space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
-      public static Builder newBuilder() { return Builder.create(); }
       public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie prototype) {
-        return newBuilder().mergeFrom(prototype);
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
       }
-      public Builder toBuilder() { return newBuilder(this); }
+      public static Builder newBuilder(space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -4207,7 +4452,7 @@ public final class BurpMessages {
        * Protobuf type {@code space.polylog.burp.BurpResponse.Cookie}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:space.polylog.burp.BurpResponse.Cookie)
           space.polylog.burp.protobuf.BurpMessages.BurpResponse.CookieOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
@@ -4215,7 +4460,7 @@ public final class BurpMessages {
           return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpResponse_Cookie_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpResponse_Cookie_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -4228,33 +4473,26 @@ public final class BurpMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
           }
         }
-        private static Builder create() {
-          return new Builder();
-        }
-
         public Builder clear() {
           super.clear();
           expirationDate_ = 0L;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          domain_ = "";
-          bitField0_ = (bitField0_ & ~0x00000002);
-          name_ = "";
-          bitField0_ = (bitField0_ & ~0x00000004);
-          value_ = "";
-          bitField0_ = (bitField0_ & ~0x00000008);
-          return this;
-        }
 
-        public Builder clone() {
-          return create().mergeFrom(buildPartial());
+          domain_ = "";
+
+          name_ = "";
+
+          value_ = "";
+
+          return this;
         }
 
         public com.google.protobuf.Descriptors.Descriptor
@@ -4276,29 +4514,40 @@ public final class BurpMessages {
 
         public space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie buildPartial() {
           space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie result = new space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
           result.expirationDate_ = expirationDate_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
           result.domain_ = domain_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000004;
-          }
           result.name_ = name_;
-          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-            to_bitField0_ |= 0x00000008;
-          }
           result.value_ = value_;
-          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
 
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie) {
             return mergeFrom((space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie)other);
@@ -4310,45 +4559,26 @@ public final class BurpMessages {
 
         public Builder mergeFrom(space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie other) {
           if (other == space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie.getDefaultInstance()) return this;
-          if (other.hasExpirationDate()) {
+          if (other.getExpirationDate() != 0L) {
             setExpirationDate(other.getExpirationDate());
           }
-          if (other.hasDomain()) {
-            bitField0_ |= 0x00000002;
+          if (!other.getDomain().isEmpty()) {
             domain_ = other.domain_;
             onChanged();
           }
-          if (other.hasName()) {
-            bitField0_ |= 0x00000004;
+          if (!other.getName().isEmpty()) {
             name_ = other.name_;
             onChanged();
           }
-          if (other.hasValue()) {
-            bitField0_ |= 0x00000008;
+          if (!other.getValue().isEmpty()) {
             value_ = other.value_;
             onChanged();
           }
-          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
           return this;
         }
 
         public final boolean isInitialized() {
-          if (!hasExpirationDate()) {
-            
-            return false;
-          }
-          if (!hasDomain()) {
-            
-            return false;
-          }
-          if (!hasName()) {
-            
-            return false;
-          }
-          if (!hasValue()) {
-            
-            return false;
-          }
           return true;
         }
 
@@ -4361,7 +4591,7 @@ public final class BurpMessages {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -4369,35 +4599,28 @@ public final class BurpMessages {
           }
           return this;
         }
-        private int bitField0_;
 
         private long expirationDate_ ;
         /**
-         * <code>required int64 expirationDate = 1;</code>
-         */
-        public boolean hasExpirationDate() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-        /**
-         * <code>required int64 expirationDate = 1;</code>
+         * <code>int64 expirationDate = 1;</code>
          */
         public long getExpirationDate() {
           return expirationDate_;
         }
         /**
-         * <code>required int64 expirationDate = 1;</code>
+         * <code>int64 expirationDate = 1;</code>
          */
         public Builder setExpirationDate(long value) {
-          bitField0_ |= 0x00000001;
+          
           expirationDate_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>required int64 expirationDate = 1;</code>
+         * <code>int64 expirationDate = 1;</code>
          */
         public Builder clearExpirationDate() {
-          bitField0_ = (bitField0_ & ~0x00000001);
+          
           expirationDate_ = 0L;
           onChanged();
           return this;
@@ -4405,13 +4628,7 @@ public final class BurpMessages {
 
         private java.lang.Object domain_ = "";
         /**
-         * <code>required string domain = 2;</code>
-         */
-        public boolean hasDomain() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-        /**
-         * <code>required string domain = 2;</code>
+         * <code>string domain = 2;</code>
          */
         public java.lang.String getDomain() {
           java.lang.Object ref = domain_;
@@ -4419,16 +4636,14 @@ public final class BurpMessages {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              domain_ = s;
-            }
+            domain_ = s;
             return s;
           } else {
             return (java.lang.String) ref;
           }
         }
         /**
-         * <code>required string domain = 2;</code>
+         * <code>string domain = 2;</code>
          */
         public com.google.protobuf.ByteString
             getDomainBytes() {
@@ -4444,36 +4659,37 @@ public final class BurpMessages {
           }
         }
         /**
-         * <code>required string domain = 2;</code>
+         * <code>string domain = 2;</code>
          */
         public Builder setDomain(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  
           domain_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>required string domain = 2;</code>
+         * <code>string domain = 2;</code>
          */
         public Builder clearDomain() {
-          bitField0_ = (bitField0_ & ~0x00000002);
+          
           domain_ = getDefaultInstance().getDomain();
           onChanged();
           return this;
         }
         /**
-         * <code>required string domain = 2;</code>
+         * <code>string domain = 2;</code>
          */
         public Builder setDomainBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  checkByteStringIsUtf8(value);
+          
           domain_ = value;
           onChanged();
           return this;
@@ -4481,13 +4697,7 @@ public final class BurpMessages {
 
         private java.lang.Object name_ = "";
         /**
-         * <code>required string name = 3;</code>
-         */
-        public boolean hasName() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-        /**
-         * <code>required string name = 3;</code>
+         * <code>string name = 3;</code>
          */
         public java.lang.String getName() {
           java.lang.Object ref = name_;
@@ -4495,16 +4705,14 @@ public final class BurpMessages {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              name_ = s;
-            }
+            name_ = s;
             return s;
           } else {
             return (java.lang.String) ref;
           }
         }
         /**
-         * <code>required string name = 3;</code>
+         * <code>string name = 3;</code>
          */
         public com.google.protobuf.ByteString
             getNameBytes() {
@@ -4520,36 +4728,37 @@ public final class BurpMessages {
           }
         }
         /**
-         * <code>required string name = 3;</code>
+         * <code>string name = 3;</code>
          */
         public Builder setName(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  
           name_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>required string name = 3;</code>
+         * <code>string name = 3;</code>
          */
         public Builder clearName() {
-          bitField0_ = (bitField0_ & ~0x00000004);
+          
           name_ = getDefaultInstance().getName();
           onChanged();
           return this;
         }
         /**
-         * <code>required string name = 3;</code>
+         * <code>string name = 3;</code>
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  checkByteStringIsUtf8(value);
+          
           name_ = value;
           onChanged();
           return this;
@@ -4557,13 +4766,7 @@ public final class BurpMessages {
 
         private java.lang.Object value_ = "";
         /**
-         * <code>required string value = 4;</code>
-         */
-        public boolean hasValue() {
-          return ((bitField0_ & 0x00000008) == 0x00000008);
-        }
-        /**
-         * <code>required string value = 4;</code>
+         * <code>string value = 4;</code>
          */
         public java.lang.String getValue() {
           java.lang.Object ref = value_;
@@ -4571,16 +4774,14 @@ public final class BurpMessages {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              value_ = s;
-            }
+            value_ = s;
             return s;
           } else {
             return (java.lang.String) ref;
           }
         }
         /**
-         * <code>required string value = 4;</code>
+         * <code>string value = 4;</code>
          */
         public com.google.protobuf.ByteString
             getValueBytes() {
@@ -4596,50 +4797,88 @@ public final class BurpMessages {
           }
         }
         /**
-         * <code>required string value = 4;</code>
+         * <code>string value = 4;</code>
          */
         public Builder setValue(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  
           value_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>required string value = 4;</code>
+         * <code>string value = 4;</code>
          */
         public Builder clearValue() {
-          bitField0_ = (bitField0_ & ~0x00000008);
+          
           value_ = getDefaultInstance().getValue();
           onChanged();
           return this;
         }
         /**
-         * <code>required string value = 4;</code>
+         * <code>string value = 4;</code>
          */
         public Builder setValueBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  checkByteStringIsUtf8(value);
+          
           value_ = value;
           onChanged();
           return this;
         }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
 
         // @@protoc_insertion_point(builder_scope:space.polylog.burp.BurpResponse.Cookie)
       }
 
+      // @@protoc_insertion_point(class_scope:space.polylog.burp.BurpResponse.Cookie)
+      private static final space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie DEFAULT_INSTANCE;
       static {
-        defaultInstance = new Cookie(true);
-        defaultInstance.initFields();
+        DEFAULT_INSTANCE = new space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie();
       }
 
-      // @@protoc_insertion_point(class_scope:space.polylog.burp.BurpResponse.Cookie)
+      public static space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Cookie>
+          PARSER = new com.google.protobuf.AbstractParser<Cookie>() {
+        public Cookie parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Cookie(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Cookie> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Cookie> getParserForType() {
+        return PARSER;
+      }
+
+      public space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     private int bitField0_;
@@ -4708,15 +4947,9 @@ public final class BurpMessages {
     }
 
     public static final int INFERREDMIMETYPE_FIELD_NUMBER = 3;
-    private java.lang.Object inferredMimeType_;
+    private volatile java.lang.Object inferredMimeType_;
     /**
-     * <code>required string inferredMimeType = 3;</code>
-     */
-    public boolean hasInferredMimeType() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required string inferredMimeType = 3;</code>
+     * <code>string inferredMimeType = 3;</code>
      */
     public java.lang.String getInferredMimeType() {
       java.lang.Object ref = inferredMimeType_;
@@ -4726,14 +4959,12 @@ public final class BurpMessages {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          inferredMimeType_ = s;
-        }
+        inferredMimeType_ = s;
         return s;
       }
     }
     /**
-     * <code>required string inferredMimeType = 3;</code>
+     * <code>string inferredMimeType = 3;</code>
      */
     public com.google.protobuf.ByteString
         getInferredMimeTypeBytes() {
@@ -4750,15 +4981,9 @@ public final class BurpMessages {
     }
 
     public static final int STATEDMIMETYPE_FIELD_NUMBER = 4;
-    private java.lang.Object statedMimeType_;
+    private volatile java.lang.Object statedMimeType_;
     /**
-     * <code>required string statedMimeType = 4;</code>
-     */
-    public boolean hasStatedMimeType() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required string statedMimeType = 4;</code>
+     * <code>string statedMimeType = 4;</code>
      */
     public java.lang.String getStatedMimeType() {
       java.lang.Object ref = statedMimeType_;
@@ -4768,14 +4993,12 @@ public final class BurpMessages {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          statedMimeType_ = s;
-        }
+        statedMimeType_ = s;
         return s;
       }
     }
     /**
-     * <code>required string statedMimeType = 4;</code>
+     * <code>string statedMimeType = 4;</code>
      */
     public com.google.protobuf.ByteString
         getStatedMimeTypeBytes() {
@@ -4794,28 +5017,16 @@ public final class BurpMessages {
     public static final int STATUSCODE_FIELD_NUMBER = 5;
     private int statusCode_;
     /**
-     * <code>required int32 statusCode = 5;</code>
-     */
-    public boolean hasStatusCode() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>required int32 statusCode = 5;</code>
+     * <code>int32 statusCode = 5;</code>
      */
     public int getStatusCode() {
       return statusCode_;
     }
 
     public static final int BASE64BODY_FIELD_NUMBER = 6;
-    private java.lang.Object base64Body_;
+    private volatile java.lang.Object base64Body_;
     /**
-     * <code>optional string base64Body = 6;</code>
-     */
-    public boolean hasBase64Body() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>optional string base64Body = 6;</code>
+     * <code>string base64Body = 6;</code>
      */
     public java.lang.String getBase64Body() {
       java.lang.Object ref = base64Body_;
@@ -4825,14 +5036,12 @@ public final class BurpMessages {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          base64Body_ = s;
-        }
+        base64Body_ = s;
         return s;
       }
     }
     /**
-     * <code>optional string base64Body = 6;</code>
+     * <code>string base64Body = 6;</code>
      */
     public com.google.protobuf.ByteString
         getBase64BodyBytes() {
@@ -4848,77 +5057,47 @@ public final class BurpMessages {
       }
     }
 
-    private void initFields() {
-      headers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      cookies_ = java.util.Collections.emptyList();
-      inferredMimeType_ = "";
-      statedMimeType_ = "";
-      statusCode_ = 0;
-      base64Body_ = "";
-    }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasInferredMimeType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasStatedMimeType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasStatusCode()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      for (int i = 0; i < getCookiesCount(); i++) {
-        if (!getCookies(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       memoizedIsInitialized = 1;
       return true;
     }
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       for (int i = 0; i < headers_.size(); i++) {
-        output.writeBytes(1, headers_.getByteString(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, headers_.getRaw(i));
       }
       for (int i = 0; i < cookies_.size(); i++) {
         output.writeMessage(2, cookies_.get(i));
       }
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(3, getInferredMimeTypeBytes());
+      if (!getInferredMimeTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, inferredMimeType_);
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(4, getStatedMimeTypeBytes());
+      if (!getStatedMimeTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, statedMimeType_);
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (statusCode_ != 0) {
         output.writeInt32(5, statusCode_);
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(6, getBase64BodyBytes());
+      if (!getBase64BodyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, base64Body_);
       }
-      getUnknownFields().writeTo(output);
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       {
         int dataSize = 0;
         for (int i = 0; i < headers_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(headers_.getByteString(i));
+          dataSize += computeStringSizeNoTag(headers_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getHeadersList().size();
@@ -4927,32 +5106,76 @@ public final class BurpMessages {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, cookies_.get(i));
       }
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getInferredMimeTypeBytes());
+      if (!getInferredMimeTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, inferredMimeType_);
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getStatedMimeTypeBytes());
+      if (!getStatedMimeTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, statedMimeType_);
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (statusCode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, statusCode_);
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getBase64BodyBytes());
+      if (!getBase64BodyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, base64Body_);
       }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
     @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof space.polylog.burp.protobuf.BurpMessages.BurpResponse)) {
+        return super.equals(obj);
+      }
+      space.polylog.burp.protobuf.BurpMessages.BurpResponse other = (space.polylog.burp.protobuf.BurpMessages.BurpResponse) obj;
+
+      boolean result = true;
+      result = result && getHeadersList()
+          .equals(other.getHeadersList());
+      result = result && getCookiesList()
+          .equals(other.getCookiesList());
+      result = result && getInferredMimeType()
+          .equals(other.getInferredMimeType());
+      result = result && getStatedMimeType()
+          .equals(other.getStatedMimeType());
+      result = result && (getStatusCode()
+          == other.getStatusCode());
+      result = result && getBase64Body()
+          .equals(other.getBase64Body());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getHeadersCount() > 0) {
+        hash = (37 * hash) + HEADERS_FIELD_NUMBER;
+        hash = (53 * hash) + getHeadersList().hashCode();
+      }
+      if (getCookiesCount() > 0) {
+        hash = (37 * hash) + COOKIES_FIELD_NUMBER;
+        hash = (53 * hash) + getCookiesList().hashCode();
+      }
+      hash = (37 * hash) + INFERREDMIMETYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getInferredMimeType().hashCode();
+      hash = (37 * hash) + STATEDMIMETYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getStatedMimeType().hashCode();
+      hash = (37 * hash) + STATUSCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getStatusCode();
+      hash = (37 * hash) + BASE64BODY_FIELD_NUMBER;
+      hash = (53 * hash) + getBase64Body().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static space.polylog.burp.protobuf.BurpMessages.BurpResponse parseFrom(
@@ -4978,46 +5201,57 @@ public final class BurpMessages {
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
     public static space.polylog.burp.protobuf.BurpMessages.BurpResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(space.polylog.burp.protobuf.BurpMessages.BurpResponse prototype) {
-      return newBuilder().mergeFrom(prototype);
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
     }
-    public Builder toBuilder() { return newBuilder(this); }
+    public static Builder newBuilder(space.polylog.burp.protobuf.BurpMessages.BurpResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5025,7 +5259,7 @@ public final class BurpMessages {
      * Protobuf type {@code space.polylog.burp.BurpResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:space.polylog.burp.BurpResponse)
         space.polylog.burp.protobuf.BurpMessages.BurpResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
@@ -5033,7 +5267,7 @@ public final class BurpMessages {
         return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpResponse_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return space.polylog.burp.protobuf.BurpMessages.internal_static_space_polylog_burp_BurpResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -5046,19 +5280,16 @@ public final class BurpMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getCookiesFieldBuilder();
         }
       }
-      private static Builder create() {
-        return new Builder();
-      }
-
       public Builder clear() {
         super.clear();
         headers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -5070,18 +5301,14 @@ public final class BurpMessages {
           cookiesBuilder_.clear();
         }
         inferredMimeType_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        statedMimeType_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
-        statusCode_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        base64Body_ = "";
-        bitField0_ = (bitField0_ & ~0x00000020);
-        return this;
-      }
 
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
+        statedMimeType_ = "";
+
+        statusCode_ = 0;
+
+        base64Body_ = "";
+
+        return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
@@ -5119,27 +5346,41 @@ public final class BurpMessages {
         } else {
           result.cookies_ = cookiesBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000001;
-        }
         result.inferredMimeType_ = inferredMimeType_;
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000002;
-        }
         result.statedMimeType_ = statedMimeType_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000004;
-        }
         result.statusCode_ = statusCode_;
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000008;
-        }
         result.base64Body_ = base64Body_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof space.polylog.burp.protobuf.BurpMessages.BurpResponse) {
           return mergeFrom((space.polylog.burp.protobuf.BurpMessages.BurpResponse)other);
@@ -5180,54 +5421,33 @@ public final class BurpMessages {
               cookies_ = other.cookies_;
               bitField0_ = (bitField0_ & ~0x00000002);
               cookiesBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCookiesFieldBuilder() : null;
             } else {
               cookiesBuilder_.addAllMessages(other.cookies_);
             }
           }
         }
-        if (other.hasInferredMimeType()) {
-          bitField0_ |= 0x00000004;
+        if (!other.getInferredMimeType().isEmpty()) {
           inferredMimeType_ = other.inferredMimeType_;
           onChanged();
         }
-        if (other.hasStatedMimeType()) {
-          bitField0_ |= 0x00000008;
+        if (!other.getStatedMimeType().isEmpty()) {
           statedMimeType_ = other.statedMimeType_;
           onChanged();
         }
-        if (other.hasStatusCode()) {
+        if (other.getStatusCode() != 0) {
           setStatusCode(other.getStatusCode());
         }
-        if (other.hasBase64Body()) {
-          bitField0_ |= 0x00000020;
+        if (!other.getBase64Body().isEmpty()) {
           base64Body_ = other.base64Body_;
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
-        if (!hasInferredMimeType()) {
-          
-          return false;
-        }
-        if (!hasStatedMimeType()) {
-          
-          return false;
-        }
-        if (!hasStatusCode()) {
-          
-          return false;
-        }
-        for (int i = 0; i < getCookiesCount(); i++) {
-          if (!getCookies(i).isInitialized()) {
-            
-            return false;
-          }
-        }
         return true;
       }
 
@@ -5240,7 +5460,7 @@ public final class BurpMessages {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (space.polylog.burp.protobuf.BurpMessages.BurpResponse) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -5337,7 +5557,8 @@ public final class BurpMessages {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureHeadersIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureHeadersIsMutable();
         headers_.add(value);
         onChanged();
         return this;
@@ -5352,7 +5573,7 @@ public final class BurpMessages {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie, space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie.Builder, space.polylog.burp.protobuf.BurpMessages.BurpResponse.CookieOrBuilder> cookiesBuilder_;
 
       /**
@@ -5568,11 +5789,11 @@ public final class BurpMessages {
            getCookiesBuilderList() {
         return getCookiesFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie, space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie.Builder, space.polylog.burp.protobuf.BurpMessages.BurpResponse.CookieOrBuilder> 
           getCookiesFieldBuilder() {
         if (cookiesBuilder_ == null) {
-          cookiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          cookiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie, space.polylog.burp.protobuf.BurpMessages.BurpResponse.Cookie.Builder, space.polylog.burp.protobuf.BurpMessages.BurpResponse.CookieOrBuilder>(
                   cookies_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
@@ -5585,13 +5806,7 @@ public final class BurpMessages {
 
       private java.lang.Object inferredMimeType_ = "";
       /**
-       * <code>required string inferredMimeType = 3;</code>
-       */
-      public boolean hasInferredMimeType() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required string inferredMimeType = 3;</code>
+       * <code>string inferredMimeType = 3;</code>
        */
       public java.lang.String getInferredMimeType() {
         java.lang.Object ref = inferredMimeType_;
@@ -5599,16 +5814,14 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            inferredMimeType_ = s;
-          }
+          inferredMimeType_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>required string inferredMimeType = 3;</code>
+       * <code>string inferredMimeType = 3;</code>
        */
       public com.google.protobuf.ByteString
           getInferredMimeTypeBytes() {
@@ -5624,36 +5837,37 @@ public final class BurpMessages {
         }
       }
       /**
-       * <code>required string inferredMimeType = 3;</code>
+       * <code>string inferredMimeType = 3;</code>
        */
       public Builder setInferredMimeType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  
         inferredMimeType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string inferredMimeType = 3;</code>
+       * <code>string inferredMimeType = 3;</code>
        */
       public Builder clearInferredMimeType() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         inferredMimeType_ = getDefaultInstance().getInferredMimeType();
         onChanged();
         return this;
       }
       /**
-       * <code>required string inferredMimeType = 3;</code>
+       * <code>string inferredMimeType = 3;</code>
        */
       public Builder setInferredMimeTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  checkByteStringIsUtf8(value);
+        
         inferredMimeType_ = value;
         onChanged();
         return this;
@@ -5661,13 +5875,7 @@ public final class BurpMessages {
 
       private java.lang.Object statedMimeType_ = "";
       /**
-       * <code>required string statedMimeType = 4;</code>
-       */
-      public boolean hasStatedMimeType() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>required string statedMimeType = 4;</code>
+       * <code>string statedMimeType = 4;</code>
        */
       public java.lang.String getStatedMimeType() {
         java.lang.Object ref = statedMimeType_;
@@ -5675,16 +5883,14 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            statedMimeType_ = s;
-          }
+          statedMimeType_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>required string statedMimeType = 4;</code>
+       * <code>string statedMimeType = 4;</code>
        */
       public com.google.protobuf.ByteString
           getStatedMimeTypeBytes() {
@@ -5700,36 +5906,37 @@ public final class BurpMessages {
         }
       }
       /**
-       * <code>required string statedMimeType = 4;</code>
+       * <code>string statedMimeType = 4;</code>
        */
       public Builder setStatedMimeType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  
         statedMimeType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string statedMimeType = 4;</code>
+       * <code>string statedMimeType = 4;</code>
        */
       public Builder clearStatedMimeType() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         statedMimeType_ = getDefaultInstance().getStatedMimeType();
         onChanged();
         return this;
       }
       /**
-       * <code>required string statedMimeType = 4;</code>
+       * <code>string statedMimeType = 4;</code>
        */
       public Builder setStatedMimeTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  checkByteStringIsUtf8(value);
+        
         statedMimeType_ = value;
         onChanged();
         return this;
@@ -5737,31 +5944,25 @@ public final class BurpMessages {
 
       private int statusCode_ ;
       /**
-       * <code>required int32 statusCode = 5;</code>
-       */
-      public boolean hasStatusCode() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>required int32 statusCode = 5;</code>
+       * <code>int32 statusCode = 5;</code>
        */
       public int getStatusCode() {
         return statusCode_;
       }
       /**
-       * <code>required int32 statusCode = 5;</code>
+       * <code>int32 statusCode = 5;</code>
        */
       public Builder setStatusCode(int value) {
-        bitField0_ |= 0x00000010;
+        
         statusCode_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 statusCode = 5;</code>
+       * <code>int32 statusCode = 5;</code>
        */
       public Builder clearStatusCode() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         statusCode_ = 0;
         onChanged();
         return this;
@@ -5769,13 +5970,7 @@ public final class BurpMessages {
 
       private java.lang.Object base64Body_ = "";
       /**
-       * <code>optional string base64Body = 6;</code>
-       */
-      public boolean hasBase64Body() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      /**
-       * <code>optional string base64Body = 6;</code>
+       * <code>string base64Body = 6;</code>
        */
       public java.lang.String getBase64Body() {
         java.lang.Object ref = base64Body_;
@@ -5783,16 +5978,14 @@ public final class BurpMessages {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            base64Body_ = s;
-          }
+          base64Body_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string base64Body = 6;</code>
+       * <code>string base64Body = 6;</code>
        */
       public com.google.protobuf.ByteString
           getBase64BodyBytes() {
@@ -5808,113 +6001,161 @@ public final class BurpMessages {
         }
       }
       /**
-       * <code>optional string base64Body = 6;</code>
+       * <code>string base64Body = 6;</code>
        */
       public Builder setBase64Body(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  
         base64Body_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string base64Body = 6;</code>
+       * <code>string base64Body = 6;</code>
        */
       public Builder clearBase64Body() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         base64Body_ = getDefaultInstance().getBase64Body();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string base64Body = 6;</code>
+       * <code>string base64Body = 6;</code>
        */
       public Builder setBase64BodyBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  checkByteStringIsUtf8(value);
+        
         base64Body_ = value;
         onChanged();
         return this;
       }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
 
       // @@protoc_insertion_point(builder_scope:space.polylog.burp.BurpResponse)
     }
 
+    // @@protoc_insertion_point(class_scope:space.polylog.burp.BurpResponse)
+    private static final space.polylog.burp.protobuf.BurpMessages.BurpResponse DEFAULT_INSTANCE;
     static {
-      defaultInstance = new BurpResponse(true);
-      defaultInstance.initFields();
+      DEFAULT_INSTANCE = new space.polylog.burp.protobuf.BurpMessages.BurpResponse();
     }
 
-    // @@protoc_insertion_point(class_scope:space.polylog.burp.BurpResponse)
+    public static space.polylog.burp.protobuf.BurpMessages.BurpResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BurpResponse>
+        PARSER = new com.google.protobuf.AbstractParser<BurpResponse>() {
+      public BurpResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new BurpResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BurpResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BurpResponse> getParserForType() {
+      return PARSER;
+    }
+
+    public space.polylog.burp.protobuf.BurpMessages.BurpResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_space_polylog_burp_Empty_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_space_polylog_burp_Empty_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_space_polylog_burp_BurpRequest_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_space_polylog_burp_BurpRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_space_polylog_burp_BurpRequest_URL_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_space_polylog_burp_BurpRequest_URL_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_space_polylog_burp_BurpRequest_Parameter_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_space_polylog_burp_BurpRequest_Parameter_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_space_polylog_burp_BurpResponse_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_space_polylog_burp_BurpResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_space_polylog_burp_BurpResponse_Cookie_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_space_polylog_burp_BurpResponse_Cookie_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017burp-http.proto\022\022space.polylog.burp\"\323\005" +
-      "\n\013BurpRequest\022\017\n\007headers\030\001 \003(\t\0220\n\003url\030\002 " +
-      "\002(\0132#.space.polylog.burp.BurpRequest.URL" +
-      "\022\025\n\rrequestMethod\030\003 \002(\t\022=\n\nparameters\030\004 " +
-      "\003(\0132).space.polylog.burp.BurpRequest.Par" +
-      "ameter\0224\n\005state\030\005 \002(\0162%.space.polylog.bu" +
-      "rp.BurpRequest.State\022@\n\013contentType\030\006 \002(" +
-      "\0162+.space.polylog.burp.BurpRequest.Conte" +
-      "ntType\022\022\n\nbase64Body\0309 \001(\t\032A\n\003URL\022\020\n\010pro" +
-      "tocol\030\001 \001(\t\022\014\n\004host\030\002 \001(\t\022\014\n\004port\030\003 \001(\005\022",
-      "\014\n\004file\030\004 \001(\t\032l\n\tParameter\022\014\n\004name\030\001 \002(\t" +
-      "\022\r\n\005value\030\002 \002(\t\022\014\n\004type\030\003 \002(\005\0224\n\005state\030\004" +
-      " \002(\0162%.space.polylog.burp.BurpRequest.St" +
-      "ate\"=\n\005State\022\016\n\nUNMODIFIED\020\000\022\014\n\010MODIFIED" +
-      "\020\001\022\013\n\007DELETED\020\002\022\t\n\005ADDED\020\003\"\256\001\n\013ContentTy" +
-      "pe\022\025\n\021CONTENT_TYPE_NONE\020\000\022\034\n\030CONTENT_TYP" +
-      "E_URL_ENCODED\020\001\022\032\n\026CONTENT_TYPE_MULTIPAR" +
-      "T\020\002\022\025\n\021CONTENT_TYPE_JSON\020\004\022\024\n\020CONTENT_TY" +
-      "PE_AMF\020\005\022!\n\024CONTENT_TYPE_UNKNOWN\020\377\377\377\377\377\377\377" +
-      "\377\377\001\"\202\002\n\014BurpResponse\022\017\n\007headers\030\001 \003(\t\0228\n",
-      "\007cookies\030\002 \003(\0132\'.space.polylog.burp.Burp" +
-      "Response.Cookie\022\030\n\020inferredMimeType\030\003 \002(" +
-      "\t\022\026\n\016statedMimeType\030\004 \002(\t\022\022\n\nstatusCode\030" +
-      "\005 \002(\005\022\022\n\nbase64Body\030\006 \001(\t\032M\n\006Cookie\022\026\n\016e" +
-      "xpirationDate\030\001 \002(\003\022\016\n\006domain\030\002 \002(\t\022\014\n\004n" +
-      "ame\030\003 \002(\t\022\r\n\005value\030\004 \002(\tB+\n\033space.polylo" +
-      "g.burp.protobufB\014BurpMessages"
+      "\n\017burp-http.proto\022\022space.polylog.burp\"\007\n" +
+      "\005Empty\"\323\005\n\013BurpRequest\022\017\n\007headers\030\001 \003(\t\022" +
+      "0\n\003url\030\002 \001(\0132#.space.polylog.burp.BurpRe" +
+      "quest.URL\022\025\n\rrequestMethod\030\003 \001(\t\022=\n\npara" +
+      "meters\030\004 \003(\0132).space.polylog.burp.BurpRe" +
+      "quest.Parameter\0224\n\005state\030\005 \001(\0162%.space.p" +
+      "olylog.burp.BurpRequest.State\022@\n\013content" +
+      "Type\030\006 \001(\0162+.space.polylog.burp.BurpRequ" +
+      "est.ContentType\022\022\n\nbase64Body\030\007 \001(\t\032A\n\003U" +
+      "RL\022\020\n\010protocol\030\001 \001(\t\022\014\n\004host\030\002 \001(\t\022\014\n\004po",
+      "rt\030\003 \001(\005\022\014\n\004file\030\004 \001(\t\032l\n\tParameter\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022\014\n\004type\030\003 \001(\005\0224" +
+      "\n\005state\030\004 \001(\0162%.space.polylog.burp.BurpR" +
+      "equest.State\"=\n\005State\022\016\n\nUNMODIFIED\020\000\022\014\n" +
+      "\010MODIFIED\020\001\022\013\n\007DELETED\020\002\022\t\n\005ADDED\020\003\"\256\001\n\013" +
+      "ContentType\022\025\n\021CONTENT_TYPE_NONE\020\000\022\034\n\030CO" +
+      "NTENT_TYPE_URL_ENCODED\020\001\022\032\n\026CONTENT_TYPE" +
+      "_MULTIPART\020\002\022\025\n\021CONTENT_TYPE_JSON\020\004\022\024\n\020C" +
+      "ONTENT_TYPE_AMF\020\005\022!\n\024CONTENT_TYPE_UNKNOW" +
+      "N\020\377\377\377\377\377\377\377\377\377\001\"\202\002\n\014BurpResponse\022\017\n\007headers",
+      "\030\001 \003(\t\0228\n\007cookies\030\002 \003(\0132\'.space.polylog." +
+      "burp.BurpResponse.Cookie\022\030\n\020inferredMime" +
+      "Type\030\003 \001(\t\022\026\n\016statedMimeType\030\004 \001(\t\022\022\n\nst" +
+      "atusCode\030\005 \001(\005\022\022\n\nbase64Body\030\006 \001(\t\032M\n\006Co" +
+      "okie\022\026\n\016expirationDate\030\001 \001(\003\022\016\n\006domain\030\002" +
+      " \001(\t\022\014\n\004name\030\003 \001(\t\022\r\n\005value\030\004 \001(\t2\260\001\n\rBu" +
+      "rpConnector\022Q\n\013SendRequest\022\037.space.polyl" +
+      "og.burp.BurpRequest\032\037.space.polylog.burp" +
+      ".BurpRequest\"\000\022L\n\014SendResponse\022\037.space.p" +
+      "olylog.burp.BurpRequest\032\031.space.polylog.",
+      "burp.Empty\"\000B+\n\033space.polylog.burp.proto" +
+      "bufB\014BurpMessagesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5928,34 +6169,40 @@ public final class BurpMessages {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_space_polylog_burp_BurpRequest_descriptor =
+    internal_static_space_polylog_burp_Empty_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_space_polylog_burp_Empty_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_space_polylog_burp_Empty_descriptor,
+        new java.lang.String[] { });
+    internal_static_space_polylog_burp_BurpRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_space_polylog_burp_BurpRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_space_polylog_burp_BurpRequest_descriptor,
         new java.lang.String[] { "Headers", "Url", "RequestMethod", "Parameters", "State", "ContentType", "Base64Body", });
     internal_static_space_polylog_burp_BurpRequest_URL_descriptor =
       internal_static_space_polylog_burp_BurpRequest_descriptor.getNestedTypes().get(0);
     internal_static_space_polylog_burp_BurpRequest_URL_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_space_polylog_burp_BurpRequest_URL_descriptor,
         new java.lang.String[] { "Protocol", "Host", "Port", "File", });
     internal_static_space_polylog_burp_BurpRequest_Parameter_descriptor =
       internal_static_space_polylog_burp_BurpRequest_descriptor.getNestedTypes().get(1);
     internal_static_space_polylog_burp_BurpRequest_Parameter_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_space_polylog_burp_BurpRequest_Parameter_descriptor,
         new java.lang.String[] { "Name", "Value", "Type", "State", });
     internal_static_space_polylog_burp_BurpResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_space_polylog_burp_BurpResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_space_polylog_burp_BurpResponse_descriptor,
         new java.lang.String[] { "Headers", "Cookies", "InferredMimeType", "StatedMimeType", "StatusCode", "Base64Body", });
     internal_static_space_polylog_burp_BurpResponse_Cookie_descriptor =
       internal_static_space_polylog_burp_BurpResponse_descriptor.getNestedTypes().get(0);
     internal_static_space_polylog_burp_BurpResponse_Cookie_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_space_polylog_burp_BurpResponse_Cookie_descriptor,
         new java.lang.String[] { "ExpirationDate", "Domain", "Name", "Value", });
   }
